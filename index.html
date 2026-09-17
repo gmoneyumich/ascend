@@ -33,7 +33,6 @@
  overflow-x: hidden;  
  }  
   
-   
 .logo-option span {  
  display: block;  
  font-size: 9px;  
@@ -259,679 +258,7 @@
  margin: 20px 0 40px;  
  }  
   
- /* ── ORIGIN STORY ── */  
- .origin { background: var(--cream); }  
- .origin-grid {  
- display: grid;  
- grid-template-columns: 1fr 1fr;  
- gap: 64px;  
- align-items: start;  
- margin-top: 40px;  
- }  
- .origin-text p {  
- font-size: 16px;  
- line-height: 1.9;  
- color: var(--text-mid);  
- margin-bottom: 20px;  
- }  
- .origin-quote {  
- border-left: 3px solid var(--gold);  
- padding-left: 24px;  
- margin: 32px 0;  
- }  
- .origin-quote blockquote {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 26px;  
- font-style: italic;  
- color: var(--navy);  
- line-height: 1.5;  
- font-weight: 300;  
- }  
- .origin-quote cite {  
- display: block;  
- font-size: 11px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: var(--gold);  
- margin-top: 8px;  
- font-style: normal;  
- }  
- .timeline {  
- display: flex;  
- flex-direction: column;  
- gap: 0;  
- }  
- .timeline-item {  
- display: flex;  
- gap: 20px;  
- padding-bottom: 96px;  
- position: relative;  
- }  
- .timeline-item::before {  
- content: "";  
- position: absolute;  
- left: 47px;  
- top: 96px;  
- bottom: 0;  
- width: 1px;  
- background: var(--gold-pale);  
- }  
- .timeline-item:last-child::before { display: none; }  
- .timeline-dot {  
- width: 96px;  
- height: 96px;  
- border-radius: 50%;  
- background: var(--navy);  
- border: 2px solid var(--gold);  
- flex-shrink: 0;  
- display: flex;  
- align-items: center;  
- justify-content: center;  
- }  
- .timeline-dot span {  
- font-size: 18px;  
- font-weight: 700;  
- color: var(--gold);  
- letter-spacing: 0;  
- }  
- .timeline-item:nth-child(4) .timeline-dot {  
- background: var(--gold);  
- border: 2px solid var(--navy);  
- }  
- .timeline-item:nth-child(4) .timeline-dot span {  
- color: var(--navy);  
- }  
- .timeline-quote {  
- border-left: 3px solid var(--gold);  
- padding-left: 24px;  
- margin-top: 24px;  
- }  
- .timeline-quote blockquote {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 22px;  
- font-style: italic;  
- color: var(--navy);  
- line-height: 1.5;  
- font-weight: 300;  
- }  
- .timeline-quote cite {  
- display: block;  
- font-size: 11px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: var(--gold);  
- margin-top: 10px;  
- font-style: normal;  
- }  
- .timeline-content h4 {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 18px;  
- font-weight: 600;  
- color: var(--navy);  
- margin-bottom: 4px;  
- }  
- .timeline-content p {  
- font-size: 14px;  
- color: var(--text-mid);  
- line-height: 1.6;  
- margin: 0;  
- }  
-  
- /* ── IMPACT NUMBERS ── */  
- .impact { background: var(--cream); }  
- .impact .section-title { color: var(--navy); }  
- .impact .section-intro { color: var(--text-mid); }  
- .impact .gold-rule { margin-bottom: 60px; }  
- .stats-grid {  
- display: flex;  
- flex-wrap: wrap;  
- gap: 2px;  
- background: rgba(26,39,68,0.10);  
- border: 1px solid rgba(26,39,68,0.12);  
- border-radius: 4px;  
- overflow: hidden;  
- max-width: 100%;  
- }  
- .stat-card {  
- flex: 1 1 calc(33.333% - 2px);  
- min-width: 200px;  
- background: var(--navy-mid);  
- padding: 36px 24px;  
- text-align: center;  
- transition: background 0.2s;  
- }  
- .stat-card:hover { background: var(--navy-light); }  
- .stat-number {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 52px;  
- font-weight: 300;  
- color: var(--gold);  
- line-height: 1;  
- margin-bottom: 8px;  
- }  
- .stat-label {  
- font-size: 11px;  
- letter-spacing: 1.5px;  
- text-transform: uppercase;  
- color: rgba(250,246,237,0.6);  
- line-height: 1.4;  
- }  
- .stat-category {  
- margin-bottom: 48px;  
- }  
- .stat-category-image {  
- width: 100%;  
- height: clamp(440px, 52vw, 540px);  
- object-fit: cover;  
- object-position: center center;  
- border-radius: 4px;  
- margin-bottom: 20px;  
- display: block;  
- }  
- /* Stats images: consistent sizing with subject-focused crops */  
- .impact .stat-category:nth-of-type(1) .stat-category-image { object-position: 50% 48%; }  
- .impact .stat-category:nth-of-type(2) .stat-category-image { object-position: 42% 45%; }  
- .impact .stat-category:nth-of-type(3) .stat-category-image { object-position: 50% 42%; }  
- .stat-category-label {  
- font-family: "Raleway", sans-serif;  
- font-size: 13px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: var(--gold);  
- font-weight: 600;  
- margin-bottom: 16px;  
- text-align: left;  
- }  
-  
- .origin-quote-full {  
- width: 100vw;  
- margin-left: calc(-50vw + 50%);  
- margin-right: calc(-50vw + 50%);  
- margin-top: 0px;  
- background: var(--cream);  
- text-align: center;  
- padding: 40px 48px 24px;  
- }  
- .origin-quote-full blockquote {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 28px;  
- font-style: italic;  
- color: var(--navy);  
- line-height: 1.5;  
- font-weight: 300;  
- max-width: 800px;  
- margin: 0 auto;  
- }  
- .origin-quote-full cite {  
- display: block;  
- font-size: 11px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: var(--gold);  
- margin-top: 12px;  
- font-style: normal;  
- }  
- /* ── ASCEND PURPOSE STATEMENT ── */  
- .purpose-section {  
- background: var(--cream);  
- padding: 72px 0 64px;  
- border-top: 1px solid var(--cream-dark);  
- }  
- .purpose-section .section-eyebrow {  
- text-align: left;  
- }  
- .purpose-statement {  
- font-family: "Cormorant Garamond", serif;  
- font-size: clamp(24px, 3vw, 34px);  
- font-weight: 300;  
- color: var(--navy);  
- line-height: 1.35;  
- margin-bottom: 24px;  
- }  
- .purpose-statement em {  
- font-style: italic;  
- color: var(--navy);  
- }  
- .purpose-grid {  
- display: grid;  
- grid-template-columns: repeat(3, 1fr);  
- gap: 20px;  
- margin-top: 28px;  
- }  
- .purpose-card {  
- background: var(--navy);  
- color: var(--cream);  
- border-radius: 4px;  
- padding: 26px 28px 28px;  
- border-top: 4px solid var(--gold);  
- box-shadow: 0 4px 18px rgba(26,39,68,0.08);  
- }  
- .purpose-card h3 {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 26px;  
- font-weight: 600;  
- color: var(--gold);  
- margin-bottom: 10px;  
- }  
- .purpose-card p {  
- font-size: 15px;  
- line-height: 1.75;  
- color: rgba(250,246,237,0.82);  
- }  
-  
- /* ── AWARDS STRIP ── */  
- .awards-strip {  
- background: var(--cream);  
- padding: 16px 48px;  
- overflow: hidden;  
- border-top: 1px solid var(--cream-dark);  
- border-bottom: 1px solid var(--cream-dark);  
- }  
- .awards-scroll {  
- display: flex;  
- gap: 0;  
- align-items: stretch;  
- justify-content: center;  
- flex-wrap: nowrap;  
- max-width: 1200px;  
- margin: 0 auto;  
- }  
- .award-item {  
- display: flex;  
- flex-direction: row;  
- align-items: center;  
- justify-content: center;  
- text-align: left;  
- gap: 8px;  
- padding: 8px 18px;  
- border-right: none;  
- flex: 1 1 0;  
- min-width: 0;  
- position: relative;  
- min-height: 58px;  
- }  
- .award-item::after {  
- content: "";  
- position: absolute;  
- right: 0;  
- top: 50%;  
- transform: translateY(-50%);  
- width: 1px;  
- height: 44px;  
- background: rgba(26,39,68,0.12);  
- }  
- .award-item:last-child::after { display: none; }  
- .award-item .award-icon {  
- flex-shrink: 0;  
- width: 36px;  
- height: 36px;  
- filter: drop-shadow(0 1px 4px rgba(139,105,20,0.4));  
- }  
- .award-item .award-text { display: flex; flex-direction: column; gap: 2px; justify-content: center; min-height: 36px; }  
- .award-item .award-title {  
- font-family: "Raleway", sans-serif;  
- font-size: 10px;  
- font-weight: 700;  
- letter-spacing: 1px;  
- text-transform: uppercase;  
- color: var(--navy);  
- line-height: 1.25;  
- }  
- .award-item .award-year {  
- font-size: 9px;  
- color: rgba(26,39,68,0.65);  
- letter-spacing: 0.5px;  
- line-height: 1.25;  
- }  
-  
- /* ── PATHWAY ── */  
- .pathway { background: var(--navy); padding: 72px 0; }  
- .pathway-title-row {  
- display: block;  
- max-width: 760px;  
- }  
- .pathway .section-title { color: var(--cream); }  
- .pathway .section-intro { color: rgba(250,246,237,0.72); }  
- .pathway-maslow-callout {  
- display: none;  
- }  
- .pathway-maslow-full {  
- width: 360px;  
- display: block;  
- margin: 0 auto;  
- filter: drop-shadow(0 10px 18px rgba(26,39,68,0.45));  
- }  
- .pathway-maslow-caption {  
- font-family: "Raleway", sans-serif;  
- font-size: 10px;  
- letter-spacing: 1.5px;  
- text-transform: uppercase;  
- color: rgba(250,246,237,0.62);  
- font-weight: 600;  
- margin-top: 8px;  
- }  
- @media (max-width: 768px) {  
- .pathway-maslow-full { width: 220px; }  
- }  
- .pathway-cards {  
- display: flex;  
- flex-direction: column;  
- gap: 58px;  
- margin-top: 52px;  
- }  
- .pathway-card {  
- padding: 0 0 58px;  
- position: relative;  
- overflow: visible;  
- border-radius: 0;  
- border-bottom: 1px solid rgba(201,168,76,0.22);  
- }  
- .pathway-card:last-child {  
- border-bottom: none;  
- padding-bottom: 0;  
- }  
- .pathway-card.ignite,  
- .pathway-card.shift,  
- .pathway-card.launch {  
- background: transparent;  
- border-left: none;  
- }  
- .pathway-card::after { display: none; }  
- .pathway-maslow-badge {  
- position: absolute;  
- top: 16px;  
- right: 16px;  
- width: 130px;  
- border-radius: 3px;  
- overflow: hidden;  
- box-shadow: 0 2px 8px rgba(0,0,0,0.25);  
- z-index: 2;  
- }  
- .pathway-maslow-badge img {  
- width: 100%;  
- display: block;  
- }  
- .pathway-maslow-badge-label {  
- font-size: 8px;  
- letter-spacing: 0.5px;  
- text-transform: uppercase;  
- color: rgba(250,246,237,0.55);  
- text-align: right;  
- margin-top: 4px;  
- }  
- .pathway-text {  
- max-width: 640px;  
- margin: 0 auto;  
- padding: 0;  
- }  
- .pathway-tag {  
- font-size: 14px;  
- letter-spacing: 3px;  
- text-transform: uppercase;  
- color: var(--gold);  
- margin-bottom: 6px;  
- }  
- .pathway-name {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 38px;  
- font-weight: 300;  
- color: var(--white);  
- margin-bottom: 8px;  
- }  
- .pathway-subtitle {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 22px;  
- letter-spacing: 0.3px;  
- text-transform: none;  
- color: var(--gold-light);  
- margin-bottom: 12px;  
- font-weight: 300;  
- font-style: italic;  
- line-height: 1.35;  
- }  
- .pathway-desc {  
- font-size: 21px;  
- line-height: 1.8;  
- color: rgba(250,246,237,0.78);  
- text-align: center;  
- }  
-  
- .pathway-logo {  
- width: 180px;  
- height: 180px;  
- object-fit: contain;  
- object-position: center;  
- display: block;  
- margin: 0 auto 12px;  
- background: transparent;  
- mix-blend-mode: normal;  
- }  
- .pathway-photo {  
- width: 100%;  
- height: 360px;  
- object-fit: cover;  
- object-position: center 42%;  
- display: block;  
- margin: 0 0 18px;  
- border-radius: 4px;  
- box-shadow: 0 10px 28px rgba(0,0,0,0.22);  
- }  
- .pathway-card.ignite .pathway-photo { object-position: center 42%; }  
- .pathway-card.shift .pathway-photo { object-position: center 50%; }  
- .pathway-card.launch .pathway-photo { object-position: center 34%; }  
- .pathway-maslow {  
- margin-top: 14px;  
- padding-top: 14px;  
- border-top: 1px solid rgba(201,168,76,0.2);  
- font-size: 17px;  
- font-weight: 700;  
- color: rgba(201,168,76,0.85);  
- letter-spacing: 1px;  
- font-style: italic;  
- text-align: center;  
- }  
-  
- /* ── TESTIMONIALS ── */  
- .testimonials { background: var(--cream-dark); }  
- .testimonial-photos {  
- display: grid;  
- grid-template-columns: 1.3fr 1fr;  
- gap: 24px;  
- margin-top: 40px;  
- }  
- .testimonial-photo-card { position: relative; border-radius: 4px; overflow: hidden; min-height: 260px; box-shadow: 0 4px 20px rgba(26,39,68,0.12); }  
- .testimonial-photo-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }  
- .testimonial-photo-label {  
- position: absolute;  
- left: 0; right: 0; bottom: 0;  
- padding: 14px 20px;  
- background: linear-gradient(0deg, rgba(26,39,68,0.85) 0%, rgba(26,39,68,0) 100%);  
- font-size: 10px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: var(--cream);  
- font-weight: 600;  
- }  
- .testimonial-grid {  
- display: grid;  
- grid-template-columns: repeat(3, 1fr);  
- gap: 20px;  
- margin-top: 32px;  
- }  
- .testimonial-card {  
- background: var(--white);  
- border-radius: 4px;  
- padding: 28px 24px;  
- box-shadow: 0 2px 16px rgba(26,39,68,0.07);  
- display: flex;  
- flex-direction: column;  
- }  
- .testimonial-card blockquote {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 17px;  
- font-style: italic;  
- font-weight: 300;  
- color: var(--navy);  
- line-height: 1.55;  
- margin-bottom: 16px;  
- flex-grow: 1;  
- }  
- .testimonial-card cite {  
- font-size: 10px;  
- letter-spacing: 1.5px;  
- text-transform: uppercase;  
- color: var(--gold);  
- font-weight: 700;  
- font-style: normal;  
- }  
- .testimonials-closing {  
- text-align: center;  
- margin-top: 44px;  
- font-family: "Cormorant Garamond", serif;  
- font-size: 22px;  
- font-style: italic;  
- font-weight: 300;  
- color: var(--navy);  
- }  
- @media (max-width: 900px) {  
- .testimonial-photos { grid-template-columns: 1fr; }  
- .testimonial-grid { grid-template-columns: 1fr; }  
- }  
-  
-/* ── SERVICES ── */  
- .services { background: var(--cream); }  
- .services-grid {  
- display: grid;  
- grid-template-columns: repeat(3, 1fr);  
- gap: 24px;  
- margin-top: 48px;  
- }  
- .service-card {  
- border: 1px solid var(--cream-dark);  
- border-radius: 4px;  
- padding: 36px 28px;  
- transition: border-color 0.2s, box-shadow 0.2s;  
- background: var(--white);  
- }  
- .service-card:hover {  
- border-color: var(--gold);  
- box-shadow: 0 4px 24px rgba(26,39,68,0.08);  
- }  
- .service-badge {  
- display: inline-block;  
- font-size: 9px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: var(--gold);  
- background: var(--gold-pale);  
- padding: 4px 10px;  
- border-radius: 2px;  
- margin-bottom: 14px;  
- font-weight: 600;  
- }  
- .service-card h3 {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 22px;  
- color: var(--navy);  
- margin-bottom: 10px;  
- font-weight: 600;  
- }  
- .service-card p {  
- font-size: 14px;  
- line-height: 1.8;  
- color: var(--text-mid);  
- }  
-  
- /* ── REACH ── */  
- .reach { background: var(--navy); }  
- .reach .section-title { color: var(--cream); }  
- .reach .section-intro { color: rgba(250,246,237,0.7); }  
- .reach-grid {  
- display: grid;  
- grid-template-columns: repeat(4, 1fr);  
- gap: 2px;  
- margin-top: 48px;  
- background: rgba(201,168,76,0.1);  
- border: 1px solid rgba(201,168,76,0.15);  
- border-radius: 4px;  
- overflow: hidden;  
- }  
- .reach-item {  
- background: var(--navy-mid);  
- padding: 36px 24px;  
- text-align: center;  
- }  
- .reach-num {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 14px;  
- color: var(--gold);  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- margin-bottom: 8px;  
- }  
- .reach-title {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 22px;  
- color: var(--white);  
- margin-bottom: 10px;  
- font-weight: 400;  
- }  
- .reach-desc {  
- font-size: 13px;  
- line-height: 1.7;  
- color: rgba(250,246,237,0.6);  
- }  
-  
- /* ── PARTNER ── */  
- .partner { background: var(--cream-dark); }  
- .partner-intro {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 26px;  
- font-weight: 300;  
- font-style: italic;  
- color: var(--navy);  
- max-width: 700px;  
- line-height: 1.6;  
- margin-bottom: 48px;  
- }  
- .partner-ways {  
- display: grid;  
- grid-template-columns: repeat(2, 1fr);  
- gap: 24px;  
- }  
- .partner-way {  
- background: var(--white);  
- border-radius: 4px;  
- padding: 32px;  
- display: flex;  
- gap: 20px;  
- align-items: flex-start;  
- border: 1px solid transparent;  
- transition: border-color 0.2s;  
- }  
- .partner-way:hover { border-color: var(--gold); }  
- .partner-num {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 48px;  
- font-weight: 300;  
- color: var(--gold);  
- line-height: 1;  
- flex-shrink: 0;  
- }  
- .partner-way h4 {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 20px;  
- font-weight: 600;  
- color: var(--navy);  
- margin-bottom: 8px;  
- }  
- .partner-way p {  
- font-size: 14px;  
- line-height: 1.7;  
- color: var(--text-mid);  
- }  
-  
- /* ── CTA ── */  
+ /* ── CTA & CONTACT FORM ── */  
  .cta-section {  
  background: var(--navy);  
  text-align: center;  
@@ -963,9 +290,7 @@
  line-height: 1.8;  
  position: relative;  
  }  
- .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }  
   
- /* ── CONTACT FORM ── */  
  .contact-form-wrap {  
  max-width: 600px;  
  margin: 0 auto;  
@@ -974,6 +299,7 @@
  border-radius: 4px;  
  padding: 48px 40px;  
  position: relative;  
+ text-align: left;  
  }  
  .form-row {  
  display: grid;  
@@ -1039,209 +365,16 @@
  text-align: center;  
  border-top: 1px solid rgba(201,168,76,0.2);  
  }  
- .footer-logo { margin-bottom: 16px; }  
- .footer-logo img {  
- width: 56px;  
- height: 56px;  
- object-fit: contain;  
- border-radius: 4px;  
- }  
  footer p {  
  font-size: 12px;  
  color: rgba(250,246,237,0.4);  
  letter-spacing: 1px;  
  line-height: 2;  
  }  
- .footer-tagline {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 16px;  
- font-style: italic;  
- color: rgba(201,168,76,0.7);  
- margin-bottom: 8px;  
- }  
- .footer-links {  
- display: flex;  
- gap: 24px;  
- justify-content: center;  
- margin-bottom: 24px;  
- flex-wrap: wrap;  
- }  
- .footer-links a {  
- font-size: 11px;  
- letter-spacing: 1.5px;  
- text-transform: uppercase;  
- color: rgba(250,246,237,0.4);  
- text-decoration: none;  
- transition: color 0.2s;  
- }  
- .footer-links a:hover { color: var(--gold); }  
-  
- /* ── RESPONSIVE ── */  
-  
- /* ── IMAGE PLACEHOLDERS ── */  
- .img-placeholder {  
- background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);  
- border-radius: 4px;  
- display: flex;  
- flex-direction: column;  
- align-items: center;  
- justify-content: center;  
- gap: 10px;  
- min-height: 280px;  
- border: 2px dashed rgba(201,168,76,0.3);  
- position: relative;  
- overflow: hidden;  
- }  
- .img-placeholder::before {  
- content: "";  
- position: absolute;  
- inset: 0;  
- background: radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 70%);  
- }  
- .img-placeholder .ph-icon {  
- font-size: 36px;  
- opacity: 0.5;  
- }  
- .img-placeholder .ph-label {  
- font-size: 11px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: rgba(201,168,76,0.6);  
- text-align: center;  
- padding: 0 20px;  
- font-family: "Raleway", sans-serif;  
- }  
- .img-placeholder .ph-note {  
- font-size: 10px;  
- color: rgba(250,246,237,0.3);  
- text-align: center;  
- padding: 0 20px;  
- font-style: italic;  
- font-family: "Raleway", sans-serif;  
- }  
- .img-placeholder img {  
- width: 100%;  
- height: 100%;  
- object-fit: cover;  
- position: absolute;  
- inset: 0;  
- border-radius: 4px;  
- }  
-  
- /* ── PEOPLE SECTION ── */  
- .people-section { background: var(--cream); }  
- .people-grid {  
- display: grid;  
- grid-template-columns: repeat(3, 1fr);  
- gap: 24px;  
- margin-top: 48px;  
- }  
- .people-card {  
- border-radius: 4px;  
- overflow: hidden;  
- background: var(--white);  
- box-shadow: 0 2px 16px rgba(26,39,68,0.07);  
- }  
- .people-card .img-placeholder { min-height: 300px; border-radius: 0; border: none; }  
- .people-card-body { padding: 20px; }  
- .people-card-body h4 {  
- font-family: "Cormorant Garamond", serif;  
- font-size: 18px;  
- color: var(--navy);  
- margin-bottom: 6px;  
- }  
- .people-card-body p {  
- font-size: 13px;  
- line-height: 1.7;  
- color: var(--text-mid);  
- }  
-  
- /* ── MISSION PHOTO STRIP ── */  
- .trophy-panorama {  
- width: 50vw;  
- max-width: 50vw;  
- margin: 48px auto 0;  
- display: block;  
- border-radius: 0;  
- object-fit: cover;  
- }  
- .photo-strip {  
- display: grid;  
- grid-template-columns: 1.4fr 1fr 1fr;  
- gap: 4px;  
- height: 380px;  
- margin-top: 48px;  
- }  
- .photo-strip .img-placeholder { min-height: unset; height: 100%; border-radius: 0; border: none; }  
- .photo-strip .img-placeholder:first-child { border-radius: 4px 0 0 4px; }  
- .photo-strip .img-placeholder:last-child { border-radius: 0 4px 4px 0; }  
-  
- @media (max-width: 1024px) {  
- .container { padding: 0 32px; }  
- .awards-strip { padding: 16px 32px; }  
- nav { padding: 14px 32px; }  
- .hero { padding: 80px 32px; }  
- .photo-strip { margin-left: 32px !important; margin-right: 32px !important; }  
- }  
-  
- @media (max-width: 992px) {  
- .awards-scroll { flex-wrap: wrap; }  
- .award-item { flex: 1 1 50%; padding: 10px 20px; }  
- .award-item::after { display: none; }  
- }  
- @media (max-width: 768px) {  
- .purpose-section { padding: 56px 0 48px; }  
- .purpose-grid { grid-template-columns: 1fr; }  
- .purpose-card { padding: 24px 22px; }  
- }  
- @media (max-width: 768px) {  
- .container { padding: 0 20px; }  
- nav { padding: 12px 20px; }  
- .awards-strip { padding: 12px 16px; }  
- .hero { padding: 48px 20px; }  
- .hero-inner { flex-direction: column; gap: 32px; text-align: center; }  
- .hero-text { text-align: center; }  
- .hero-logo { width: 180px; height: 180px; }  
- .hero h1 { white-space: normal; font-size: clamp(40px, 10vw, 60px); }  
- .hero-divider { margin: 0 auto 20px; }  
- .hero-buttons { justify-content: center; }  
-  
- .people-grid { grid-template-columns: 1fr; }  
- .pathway-photo { height: 260px; }  
- .stat-category-image { height: 320px; }  
- .photo-strip { grid-template-columns: 1fr; height: auto; margin-left: 0 !important; margin-right: 0 !important; }  
- .photo-strip .img-placeholder { min-height: 200px; border-radius: 4px !important; }  
- }  
- @media (max-width: 1024px) {  
- .container { padding: 0 32px; }  
- .awards-strip { padding: 16px 32px; }  
- nav { padding: 14px 32px; }  
- .hero { padding: 80px 32px; }  
- .photo-strip { margin-left: 32px !important; margin-right: 32px !important; }  
- }  
   
  @media (max-width: 768px) {  
  .container { padding: 0 20px; }  
  nav { padding: 12px 20px; }  
- .awards-strip { padding: 12px 16px; }  
- .hero { padding: 48px 20px; }  
- .hero-inner { flex-direction: column; gap: 32px; text-align: center; }  
- .hero-text { text-align: center; }  
- .hero-logo { width: 180px; height: 180px; }  
- .hero h1 { white-space: normal; font-size: clamp(40px, 10vw, 60px); }  
- .hero-divider { margin: 0 auto 20px; }  
- .hero-buttons { justify-content: center; }  
- .pathway-photo { height: 260px; }  
- .stat-category-image { height: 320px; }  
-  
- nav { padding: 12px 20px; }  
- .nav-links { display: none; }  
- .origin-grid { grid-template-columns: 1fr; gap: 40px; }  
- .stat-card { flex: 1 1 calc(50% - 2px); }  
- .pathway-cards { grid-template-columns: 1fr; }  
- .services-grid { grid-template-columns: 1fr; }  
- .reach-grid { grid-template-columns: repeat(2, 1fr); }  
- .partner-ways { grid-template-columns: 1fr; }  
  .form-row { grid-template-columns: 1fr; }  
  .contact-form-wrap { padding: 32px 24px; }  
  }  
@@ -1249,14 +382,61 @@
 </head>  
 <body>  
   
- <!-- LOGO SELECTOR (work in progress — remove when logo is finalized) -->  
-   
-  
 <!-- NAV -->  
  <nav>  
  <div class="nav-logo">  
  <img id="nav-logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAEAAElEQVR42uz9d5xc13nfj3+e55xz7526vQBYdIAFINjAZjaQVKUa1RaUZFmWrTi27Nhx7K9bHHMxjEtcvo4Tx/n+4jhxbMcNK0u2ZUtWJZekxN5JFKIRfReL7WXm3nvOeX5/3AEkWxSLZDuKdN58zWsXi+Xs7GDmfO7TPg8QCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAL/rAwPD6vh4WEVnolAIBAIfEOICI+MjHB4JgKBv48OT0Eg8DUQhod5Z9z5a1315GEi2g0AIyMjutFoOAASnqJAIBAIfA0jIyMsIvT+D//Qm37u3/7s0V//D41P3n777RcAABFhd0hrBQKBQODrIQICgO3bust3/75/f8f4/33v/Xffv9P99/9218BoB/v994/32v8B/s3b9+37/9u2v31r6d+4M7f+v//z/818f//b//v13v/7/1/33/vf1/b8AABF3A5N6sAABF5l3//wF/sF//13//2v///09///w///d3//z63t7//19//f9v/79/f/9//n3+38+E//" alt="Ascend Institute Logo">  
  </div>  
  </nav>  
+
+<!-- CONTACT SECTION -->
+<section class="cta-section" id="contact">
+  <div class="container">
+    <h2>Get in <em>Touch</em></h2>
+    <p>Ready to learn more about our programs or collaborate with us? Fill out the form below and we will get back to you.</p>
+    
+    <div class="contact-form-wrap">
+      <form action="https://formspree.io/f/jsanders@beready2ascend.org" method="POST">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="first-name">First Name</label>
+            <input type="text" id="first-name" name="first_name" required />
+          </div>
+          <div class="form-group">
+            <label for="last-name">Last Name</label>
+            <input type="text" id="last-name" name="last_name" required />
+          </div>
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        
+        <div class="form-group">
+          <label for="subject">Subject</label>
+          <select id="subject" name="subject">
+            <option value="General Inquiry">General Inquiry</option>
+            <option value="Program Information">Program Information</option>
+            <option value="Partnership">Partnership Opportunities</option>
+          </select>
+        </div>
+        
+        <div class="form-group">
+          <label for="message">Message</label>
+          <textarea id="message" name="message" required></textarea>
+        </div>
+        
+        <button type="submit" class="form-submit">Send Message</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <p>&copy; Ascend Institute. All rights reserved.</p>
+</footer>
+
 </body>  
 </html>
