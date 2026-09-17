@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ascend Institute — Be Ready to Ascend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:   #1a2744;
+      --navy-mid: #243259;
+      --navy-light: #2e3f70;
+      --gold:   #c9a84c;
+      --gold-light: #e8c97e;
+      --gold-pale: #f5e9c8;
+      --cream:  #faf6ed;
+      --cream-dark: #f0e8d4;
+      --white:  #ffffff;
+      --text-dark: #1a2744;
+      --text-mid: #3d4f6e;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Raleway", sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+    
+    .logo-option span {
+      display: block;
+      font-size: 9px;
+      text-align: center;
+      color: var(--cream);
+      padding-top: 2px;
+      font-family: Raleway, sans-serif;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 48px;
+      max-width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-wordmark {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--gold);
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .nav-wordmark span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--cream-dark);
+      font-weight: 400;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--cream-dark);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 8px 20px;
+      border-radius: 2px;
+      font-weight: 700 !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 72px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-text {
+      flex: 1;
+      text-align: left;
+    }
+    .hero-eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(48px, 5.5vw, 88px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 16px;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .hero-sub {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(16px, 2vw, 22px);
+      color: var(--cream-dark);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .hero-tagline {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(250,246,237,0.5);
+      margin-bottom: 36px;
+    }
+    .hero-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 0 20px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 36px;
+      font-family: "Raleway", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 14px 36px;
+      font-family: "Raleway", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: rgba(201,168,76,0.1); transform: translateY(-1px); }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 90px 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+    .section-eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-size: 10px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .gold-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px 0 40px;
+    }
+
+    /* ── ORIGIN STORY ── */
+    .origin { background: var(--cream); }
+    .origin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    @media (max-width: 768px) {
+      .origin-grid, .hero-inner { grid-template-columns: 1fr; flex-direction: column; gap: 40px; }
+      nav { padding: 14px 24px; flex-direction: column; gap: 16px; text-align: center; }
+    }
+    .origin-text p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+    }
+    .origin-quote {
+      border-left: 3px solid var(--gold);
+      padding-left: 24px;
+      margin: 32px 0;
+    }
+    .origin-quote blockquote {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    .origin-quote cite {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 8px;
+      font-style: normal;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 48px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 24px;
+      top: 48px;
+      bottom: 0;
+      width: 1px;
+      background: var(--gold-pale);
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 14px;
+      flex-shrink: 0;
+      z-index: 2;
+    }
+    .timeline-content h4 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .timeline-content p {
+      color: var(--text-mid);
+      font-size: 14px;
+      line-height: 1.6;
+    }
+    footer {
+      background: var(--navy);
+      color: var(--cream-dark);
+      padding: 40px 24px;
+      text-align: center;
+      font-size: 12px;
+      letter-spacing: 1px;
+      border-top: 1px solid rgba(201,168,76,0.2);
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-logo">
+      <div class="nav-wordmark">
+        Ascend <span>Institute</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#timeline">Timeline</a></li>
+      <li><a href="#contact" class="nav-cta">Enroll Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-inner">
+      <div class="hero-text">
+        <p class="hero-eyebrow">Welcome to Excellence</p>
+        <div class="hero-divider"></div>
+        <h1>Be Ready to <em>Ascend</em></h1>
+        <p class="hero-sub">Cultivating leadership, mastery, and academic distinction for tomorrow's visionaries.</p>
+        <p class="hero-tagline">Elite Training &amp; Insights</p>
+        <div class="hero-buttons">
+          <a href="#about" class="btn-primary">Explore Programs</a>
+          <a href="#contact" class="btn-outline">Get In Touch</a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- About / Origin Story -->
+  <section id="about" class="origin">
+    <div class="container">
+      <p class="section-eyebrow">Our Legacy</p>
+      <h2 class="section-title">The Foundation of <em>Distinction</em></h2>
+      <div class="gold-rule"></div>
+      
+      <div class="origin-grid">
+        <div class="origin-text">
