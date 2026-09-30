@@ -1,442 +1,2082 @@
-<!DOCTYPE html>  
-<html lang="en">  
-<head>  
- <meta charset="UTF-8" />  
- <meta name="viewport" content="width=device-width, initial-scale=1.0" />  
- <title>Ascend Institute — Be Ready to Ascend</title>  
- <link rel="preconnect" href="https://fonts.googleapis.com">  
- <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>  
- <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">  
- <style>  
- :root {  
- --navy: #1a2744;  
- --navy-mid: #243259;  
- --navy-light: #2e3f70;  
- --gold: #c9a84c;  
- --gold-light: #e8c97e;  
- --gold-pale: #f5e9c8;  
- --cream: #faf6ed;  
- --cream-dark: #f0e8d4;  
- --white: #ffffff;  
- --text-dark: #1a2744;  
- --text-mid: #3d4f6e;  
- }  
-  
- * { margin: 0; padding: 0; box-sizing: border-box; }  
-  
- html { scroll-behavior: smooth; }  
-  
- body {  
- font-family: "Raleway", sans-serif;  
- background: var(--cream);  
- color: var(--text-dark);  
- overflow-x: hidden;  
- }  
-  
-.logo-option span {  
- display: block;  
- font-size: 9px;  
- text-align: center;  
- color: var(--cream);  
- padding-top: 2px;  
- font-family: Raleway, sans-serif;  
- }  
-  
- /* ── NAV ── */  
- nav {  
- position: sticky;  
- top: 0;  
- z-index: 100;  
- background: var(--navy);  
- border-bottom: 1px solid rgba(201,168,76,0.3);  
- display: flex;  
- align-items: center;  
- justify-content: space-between;  
- padding: 14px 48px;  
- max-width: 100%;  
- }  
- .nav-logo {  
- display: flex;  
- align-items: center;  
- gap: 12px;  
- }  
- .nav-logo img {  
- width: 44px;  
- height: 44px;  
- object-fit: contain;  
- border-radius: 4px;  
- }  
- .nav-wordmark {  
- font-family: "Cormorant Garamond", serif;  
- color: var(--gold);  
- font-size: 20px;  
- font-weight: 600;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- }  
- .nav-wordmark span {  
- display: block;  
- font-size: 10px;  
- letter-spacing: 3px;  
- color: var(--cream-dark);  
- font-weight: 400;  
- }  
- .nav-links {  
- display: flex;  
- gap: 32px;  
- list-style: none;  
- }  
- .nav-links a {  
- color: var(--cream-dark);  
- text-decoration: none;  
- font-size: 12px;  
- letter-spacing: 1.5px;  
- text-transform: uppercase;  
- font-weight: 500;  
- transition: color 0.2s;  
- }  
- .nav-links a:hover { color: var(--gold); }  
- .nav-cta {  
- background: var(--gold);  
- color: var(--navy) !important;  
- padding: 8px 20px;  
- border-radius: 2px;  
- font-weight: 700 !important;  
- }  
- .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }  
-  
- /* ── HERO ── */  
- .hero {  
- background: var(--navy);  
- min-height: 88vh;  
- display: flex;  
- align-items: center;  
- justify-content: center;  
- padding: 60px 48px;  
- position: relative;  
- overflow: hidden;  
- }  
- .hero::before {  
- content: "";  
- position: absolute;  
- inset: 0;  
- background: radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.09) 0%, transparent 65%);  
- pointer-events: none;  
- }  
- .hero-inner {  
- max-width: 1100px;  
- width: 100%;  
- display: flex;  
- align-items: center;  
- gap: 72px;  
- position: relative;  
- z-index: 1;  
- }  
- .hero-logo-wrap {  
- flex-shrink: 0;  
- display: flex;  
- align-items: center;  
- justify-content: center;  
- }  
- .hero-logo {  
- width: 280px;  
- height: 280px;  
- object-fit: contain;  
- }  
- .hero-text {  
- flex: 1;  
- text-align: left;  
- }  
- .hero-eyebrow {  
- font-family: "Raleway", sans-serif;  
- font-size: 11px;  
- letter-spacing: 4px;  
- text-transform: uppercase;  
- color: var(--gold);  
- margin-bottom: 20px;  
- }  
- .hero h1 {  
- font-family: "Cormorant Garamond", serif;  
- font-size: clamp(48px, 5.5vw, 88px);  
- font-weight: 300;  
- color: var(--white);  
- line-height: 1.0;  
- margin-bottom: 16px;  
- white-space: nowrap;  
- }  
- .hero h1 em {  
- font-style: italic;  
- color: var(--gold-light);  
- }  
- .hero-sub {  
- font-family: "Cormorant Garamond", serif;  
- font-size: clamp(16px, 2vw, 22px);  
- color: var(--cream-dark);  
- font-weight: 300;  
- font-style: italic;  
- margin-bottom: 20px;  
- line-height: 1.6;  
- }  
- .hero-tagline {  
- font-size: 11px;  
- letter-spacing: 3px;  
- text-transform: uppercase;  
- color: rgba(250,246,237,0.5);  
- margin-bottom: 36px;  
- }  
- .hero-divider {  
- width: 48px;  
- height: 1px;  
- background: var(--gold);  
- margin: 0 0 20px;  
- }  
- .hero-buttons {  
- display: flex;  
- gap: 16px;  
- justify-content: flex-start;  
- flex-wrap: wrap;  
- }  
- .btn-primary {  
- background: var(--gold);  
- color: var(--navy);  
- padding: 14px 36px;  
- font-family: "Raleway", sans-serif;  
- font-size: 12px;  
- font-weight: 700;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- text-decoration: none;  
- border-radius: 2px;  
- transition: background 0.2s, transform 0.2s;  
- }  
- .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }  
- .btn-outline {  
- border: 1px solid var(--gold);  
- color: var(--gold);  
- padding: 14px 36px;  
- font-family: "Raleway", sans-serif;  
- font-size: 12px;  
- font-weight: 600;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- text-decoration: none;  
- border-radius: 2px;  
- transition: all 0.2s;  
- }  
- .btn-outline:hover { background: rgba(201,168,76,0.1); transform: translateY(-1px); }  
-  
- /* ── SECTION SHARED ── */  
- section { padding: 90px 0; }  
- .container { max-width: 1100px; margin: 0 auto; padding: 0 48px; }  
- .section-eyebrow {  
- font-family: "Raleway", sans-serif;  
- font-size: 10px;  
- letter-spacing: 4px;  
- text-transform: uppercase;  
- color: var(--gold);  
- margin-bottom: 12px;  
- }  
- .section-title {  
- font-family: "Cormorant Garamond", serif;  
- font-size: clamp(32px, 5vw, 52px);  
- font-weight: 300;  
- color: var(--navy);  
- margin-bottom: 16px;  
- line-height: 1.15;  
- }  
- .section-title em { font-style: italic; color: var(--gold); }  
- .section-intro {  
- font-size: 16px;  
- line-height: 1.8;  
- color: var(--text-mid);  
- max-width: 680px;  
- }  
- .gold-rule {  
- width: 48px;  
- height: 2px;  
- background: var(--gold);  
- margin: 20px 0 40px;  
- }  
-  
- /* ── CTA & CONTACT FORM ── */  
- .cta-section {  
- background: var(--navy);  
- text-align: center;  
- padding: 100px 24px;  
- position: relative;  
- overflow: hidden;  
- }  
- .cta-section::before {  
- content: "";  
- position: absolute;  
- inset: 0;  
- background: radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.12) 0%, transparent 60%);  
- pointer-events: none;  
- }  
- .cta-section h2 {  
- font-family: "Cormorant Garamond", serif;  
- font-size: clamp(36px, 5vw, 60px);  
- font-weight: 300;  
- color: var(--white);  
- margin-bottom: 16px;  
- position: relative;  
- }  
- .cta-section h2 em { font-style: italic; color: var(--gold-light); }  
- .cta-section p {  
- font-size: 16px;  
- color: rgba(250,246,237,0.7);  
- max-width: 560px;  
- margin: 0 auto 48px;  
- line-height: 1.8;  
- position: relative;  
- }  
-  
- .contact-form-wrap {  
- max-width: 600px;  
- margin: 0 auto;  
- background: var(--navy-mid);  
- border: 1px solid rgba(201,168,76,0.25);  
- border-radius: 4px;  
- padding: 48px 40px;  
- position: relative;  
- text-align: left;  
- }  
- .form-row {  
- display: grid;  
- grid-template-columns: 1fr 1fr;  
- gap: 16px;  
- margin-bottom: 16px;  
- }  
- .form-group {  
- display: flex;  
- flex-direction: column;  
- margin-bottom: 16px;  
- }  
- .form-group label {  
- font-size: 10px;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- color: var(--gold-light);  
- margin-bottom: 6px;  
- font-weight: 600;  
- }  
- .form-group input,  
- .form-group select,  
- .form-group textarea {  
- background: rgba(26,39,68,0.6);  
- border: 1px solid rgba(201,168,76,0.2);  
- border-radius: 2px;  
- color: var(--cream);  
- font-family: "Raleway", sans-serif;  
- font-size: 14px;  
- padding: 12px 14px;  
- outline: none;  
- transition: border-color 0.2s;  
- }  
- .form-group input:focus,  
- .form-group select:focus,  
- .form-group textarea:focus {  
- border-color: var(--gold);  
- }  
- .form-group select option { background: var(--navy); }  
- .form-group textarea { resize: vertical; min-height: 100px; }  
- .form-submit {  
- width: 100%;  
- background: var(--gold);  
- color: var(--navy);  
- border: none;  
- padding: 16px;  
- font-family: "Raleway", sans-serif;  
- font-size: 12px;  
- font-weight: 700;  
- letter-spacing: 2px;  
- text-transform: uppercase;  
- cursor: pointer;  
- border-radius: 2px;  
- transition: background 0.2s;  
- margin-top: 8px;  
- }  
- .form-submit:hover { background: var(--gold-light); }  
-  
- /* ── FOOTER ── */  
- footer {  
- background: #111b30;  
- padding: 48px 48px 28px;  
- text-align: center;  
- border-top: 1px solid rgba(201,168,76,0.2);  
- }  
- footer p {  
- font-size: 12px;  
- color: rgba(250,246,237,0.4);  
- letter-spacing: 1px;  
- line-height: 2;  
- }  
-  
- @media (max-width: 768px) {  
- .container { padding: 0 20px; }  
- nav { padding: 12px 20px; }  
- .form-row { grid-template-columns: 1fr; }  
- .contact-form-wrap { padding: 32px 24px; }  
- }  
- </style>  
-</head>  
-<body>  
-  
-<!-- NAV -->  
- <nav>  
- <div class="nav-logo">  
- <img id="nav-logo-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAZAAAAGQCAYAAACAvzbMAAEAAElEQVR42uz9d5xc13nfj3+e55xz7526vQBYdIAFINjAZjaQVKUa1RaUZFmWrTi27Nhx7K9bHHMxjEtcvo4Tx/n+4jhxbMcNK0u2ZUtWJZekxN5JFKIRfReL7WXm3nvOeX5/3AEkWxSLZDuKdN58zWsXi+Xs7GDmfO7TPg8QCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAKBQCAQCAQCgUAgEAgEAoFAIBAIBAL/rAwPD6vh4WEVnolAIBAIfEOICI+MjHB4JgKBv48OT0Eg8DUQhod5Z9z5a1315GEi2g0AIyMjutFoOAASnqJAIBAIfA0jIyMsIvT+D//Qm37u3/7s0V//D41P3n777RcAABFhd0hrBQKBQODrIQICgO3bust3/75/f8f4/33v/Xffv9P99/9218BoB/v994/32v8B/s3b9+37/9u2v31r6d+4M7f+v//z/818f//b//v13v/7/1/33/vf1/b8AABF3A5N6sAABF5l3//wF/sF//13//2v///09///w///d3//z63t7//19//f9v/79/f/9//n3+38+E//" alt="Ascend Institute Logo">  
- </div>  
- </nav>  
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ascend Institute — Be Ready to Ascend</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,300;1,400&family=Raleway:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --navy:   #1a2744;
+      --navy-mid: #243259;
+      --navy-light: #2e3f70;
+      --gold:   #c9a84c;
+      --gold-light: #e8c97e;
+      --gold-pale: #f5e9c8;
+      --cream:  #faf6ed;
+      --cream-dark: #f0e8d4;
+      --white:  #ffffff;
+      --text-dark: #1a2744;
+      --text-mid: #3d4f6e;
+    }
 
-<!-- CONTACT SECTION -->
-<section class="cta-section" id="contact">
-  <div class="container">
-    <h2>Get in <em>Touch</em></h2>
-    <p>Ready to learn more about our programs or collaborate with us? Fill out the form below and we will get back to you.</p>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: "Raleway", sans-serif;
+      background: var(--cream);
+      color: var(--text-dark);
+      overflow-x: hidden;
+    }
+
     
-    <div class="contact-form-wrap">
-      <form action="https://formspree.io/f/jsanders@beready2ascend.org" method="POST">
-        <div class="form-row">
-          <div class="form-group">
-            <label for="first-name">First Name</label>
-            <input type="text" id="first-name" name="first_name" required />
+    .logo-option span {
+      display: block;
+      font-size: 9px;
+      text-align: center;
+      color: var(--cream);
+      padding-top: 2px;
+      font-family: Raleway, sans-serif;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--navy);
+      border-bottom: 1px solid rgba(201,168,76,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 48px;
+      max-width: 100%;
+    }
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .nav-logo img {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    .nav-wordmark {
+      font-family: "Cormorant Garamond", serif;
+      color: var(--gold);
+      font-size: 20px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+    .nav-wordmark span {
+      display: block;
+      font-size: 10px;
+      letter-spacing: 3px;
+      color: var(--cream-dark);
+      font-weight: 400;
+    }
+    .nav-links {
+      display: flex;
+      gap: 32px;
+      list-style: none;
+    }
+    .nav-links a {
+      color: var(--cream-dark);
+      text-decoration: none;
+      font-size: 12px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      font-weight: 500;
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-cta {
+      background: var(--gold);
+      color: var(--navy) !important;
+      padding: 8px 20px;
+      border-radius: 2px;
+      font-weight: 700 !important;
+    }
+    .nav-cta:hover { background: var(--gold-light) !important; color: var(--navy) !important; }
+
+    /* ── HERO ── */
+    .hero {
+      background: var(--navy);
+      min-height: 88vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 60px 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 30% 60%, rgba(201,168,76,0.09) 0%, transparent 65%);
+      pointer-events: none;
+    }
+    .hero-inner {
+      max-width: 1100px;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      gap: 72px;
+      position: relative;
+      z-index: 1;
+    }
+    .hero-logo-wrap {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .hero-logo {
+      width: 280px;
+      height: 280px;
+      object-fit: contain;
+    }
+    .hero-text {
+      flex: 1;
+      text-align: left;
+    }
+    .hero-eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-size: 11px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 20px;
+    }
+    .hero h1 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(48px, 5.5vw, 88px);
+      font-weight: 300;
+      color: var(--white);
+      line-height: 1.0;
+      margin-bottom: 16px;
+      white-space: nowrap;
+    }
+    .hero h1 em {
+      font-style: italic;
+      color: var(--gold-light);
+    }
+    .hero-sub {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(16px, 2vw, 22px);
+      color: var(--cream-dark);
+      font-weight: 300;
+      font-style: italic;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    .hero-tagline {
+      font-size: 11px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: rgba(250,246,237,0.5);
+      margin-bottom: 36px;
+    }
+    .hero-divider {
+      width: 48px;
+      height: 1px;
+      background: var(--gold);
+      margin: 0 0 20px;
+    }
+    .hero-buttons {
+      display: flex;
+      gap: 16px;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    .btn-primary {
+      background: var(--gold);
+      color: var(--navy);
+      padding: 14px 36px;
+      font-family: "Raleway", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+    }
+    .btn-primary:hover { background: var(--gold-light); transform: translateY(-1px); }
+    .btn-outline {
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      padding: 14px 36px;
+      font-family: "Raleway", sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: rgba(201,168,76,0.1); transform: translateY(-1px); }
+
+    /* ── SECTION SHARED ── */
+    section { padding: 90px 0; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 48px; }
+    .section-eyebrow {
+      font-family: "Raleway", sans-serif;
+      font-size: 20px;
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 12px;
+    }
+    .section-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(32px, 5vw, 52px);
+      font-weight: 300;
+      color: var(--navy);
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-intro {
+      font-size: 16px;
+      line-height: 1.8;
+      color: var(--text-mid);
+      max-width: 680px;
+    }
+    .gold-rule {
+      width: 48px;
+      height: 2px;
+      background: var(--gold);
+      margin: 20px 0 40px;
+    }
+
+    /* ── ORIGIN STORY ── */
+    .origin { background: var(--cream); }
+    .origin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 64px;
+      align-items: start;
+      margin-top: 40px;
+    }
+    .origin-text p {
+      font-size: 16px;
+      line-height: 1.9;
+      color: var(--text-mid);
+      margin-bottom: 20px;
+    }
+    .origin-quote {
+      border-left: 3px solid var(--gold);
+      padding-left: 24px;
+      margin: 32px 0;
+    }
+    .origin-quote blockquote {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    .origin-quote cite {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 8px;
+      font-style: normal;
+    }
+    .timeline {
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+    .timeline-item {
+      display: flex;
+      gap: 20px;
+      padding-bottom: 96px;
+      position: relative;
+    }
+    .timeline-item::before {
+      content: "";
+      position: absolute;
+      left: 47px;
+      top: 96px;
+      bottom: 0;
+      width: 1px;
+      background: var(--gold-pale);
+    }
+    .timeline-item:last-child::before { display: none; }
+    .timeline-dot {
+      width: 96px;
+      height: 96px;
+      border-radius: 50%;
+      background: var(--navy);
+      border: 2px solid var(--gold);
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .timeline-dot span {
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0;
+    }
+    .timeline-item:nth-child(4) .timeline-dot {
+      background: var(--gold);
+      border: 2px solid var(--navy);
+    }
+    .timeline-item:nth-child(4) .timeline-dot span {
+      color: var(--navy);
+    }
+    .timeline-quote {
+      border-left: 3px solid var(--gold);
+      padding-left: 24px;
+      margin-top: 24px;
+    }
+    .timeline-quote blockquote {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+      font-weight: 300;
+    }
+    .timeline-quote cite {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 10px;
+      font-style: normal;
+    }
+    .timeline-content h4 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 4px;
+    }
+    .timeline-content p {
+      font-size: 14px;
+      color: var(--text-mid);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    /* ── IMPACT NUMBERS ── */
+    .impact { background: var(--cream); }
+    .impact .section-title { color: var(--navy); }
+    .impact .section-intro { color: var(--text-mid); }
+    .impact .gold-rule { margin-bottom: 60px; }
+    .stats-grid {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2px;
+      background: rgba(26,39,68,0.10);
+      border: 1px solid rgba(26,39,68,0.12);
+      border-radius: 4px;
+      overflow: hidden;
+      max-width: 100%;
+    }
+    .stat-card {
+      flex: 1 1 calc(33.333% - 2px);
+      min-width: 200px;
+      background: var(--navy-mid);
+      padding: 36px 24px;
+      text-align: center;
+      transition: background 0.2s;
+    }
+    .stat-card:hover { background: var(--navy-light); }
+    .stat-number {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 52px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      margin-bottom: 8px;
+    }
+    .stat-label {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(250,246,237,0.6);
+      line-height: 1.4;
+    }
+    .stat-category {
+      margin-bottom: 48px;
+    }
+    .stat-category-image {
+      width: 100%;
+      height: clamp(440px, 52vw, 540px);
+      object-fit: cover;
+      object-position: center center;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      display: block;
+    }
+    /* Stats images: consistent sizing with subject-focused crops */
+    .impact .stat-category:nth-of-type(1) .stat-category-image { object-position: 50% 48%; }
+    .impact .stat-category:nth-of-type(2) .stat-category-image { object-position: 42% 45%; }
+    .impact .stat-category:nth-of-type(3) .stat-category-image { object-position: 50% 42%; }
+    .stat-category-label {
+      font-family: "Raleway", sans-serif;
+      font-size: 13px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 16px;
+      text-align: left;
+    }
+
+    .origin-quote-full {
+      width: 100vw;
+      margin-left: calc(-50vw + 50%);
+      margin-right: calc(-50vw + 50%);
+      margin-top: 0px;
+      background: var(--cream);
+      text-align: center;
+      padding: 40px 48px 24px;
+    }
+    .origin-quote-full blockquote {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 28px;
+      font-style: italic;
+      color: var(--navy);
+      line-height: 1.5;
+      font-weight: 300;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+    .origin-quote-full cite {
+      display: block;
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 12px;
+      font-style: normal;
+    }
+    /* ── ASCEND PURPOSE STATEMENT ── */
+    .purpose-section {
+      background: var(--navy);
+      padding: 72px 0 64px;
+      border-top: 1px solid var(--cream-dark);
+    }
+    .purpose-section .section-eyebrow {
+      text-align: center;
+      color: var(--gold);
+    }
+    .purpose-statement {
+      text-align: center;
+      max-width: 880px;
+      margin: 0 auto 8px;
+    }
+    .purpose-statement .lead-line {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(20px, 2.4vw, 28px);
+      font-weight: 300;
+      font-style: italic;
+      color: var(--cream);
+      line-height: 1.35;
+      margin-bottom: 6px;
+    }
+    .purpose-statement .bold-line {
+      display: block;
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(28px, 3.6vw, 42px);
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1.25;
+    }
+    .purpose-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+      margin-top: 44px;
+    }
+    .purpose-card {
+      border-top: 3px solid var(--gold);
+      padding-top: 24px;
+    }
+    .purpose-card-header {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      margin-bottom: 18px;
+    }
+    .purpose-badge {
+      flex-shrink: 0;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--gold);
+      color: var(--navy);
+      font-family: "Cormorant Garamond", serif;
+      font-weight: 700;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .purpose-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+      font-weight: 700;
+      color: var(--cream);
+    }
+    .purpose-card-sub {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      margin-bottom: 16px;
+    }
+    .purpose-card-sub .sub-text {
+      font-family: "Cormorant Garamond", serif;
+      font-style: italic;
+      font-size: 19px;
+      font-weight: 300;
+      line-height: 1.3;
+      color: var(--gold-light);
+    }
+    .purpose-card-sub .sub-text strong {
+      font-style: italic;
+      font-weight: 700;
+    }
+    .purpose-card-sub svg {
+      display: none;
+    }
+    .purpose-icon {
+      width: clamp(76px, 7.5vw, 100px);
+      height: auto;
+      max-height: 96px;
+      object-fit: contain;
+      display: block;
+      flex-shrink: 0;
+    }
+    .purpose-card p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: rgba(250,246,237,0.82);
+    }
+
+    /* ── AWARDS STRIP ── */
+    .awards-strip {
+      background: var(--cream);
+      padding: 16px 48px;
+      overflow: hidden;
+      border-top: 1px solid var(--cream-dark);
+      border-bottom: 1px solid var(--cream-dark);
+    }
+    .awards-scroll {
+      display: flex;
+      gap: 0;
+      align-items: stretch;
+      justify-content: center;
+      flex-wrap: nowrap;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .award-item {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      text-align: left;
+      gap: 8px;
+      padding: 8px 18px;
+      border-right: none;
+      flex: 1 1 0;
+      min-width: 0;
+      position: relative;
+      min-height: 58px;
+    }
+    .award-item::after {
+      content: "";
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 1px;
+      height: 44px;
+      background: rgba(26,39,68,0.12);
+    }
+    .award-item:last-child::after { display: none; }
+    .award-item .award-icon {
+      flex-shrink: 0;
+      width: 54px;
+      height: 54px;
+      filter: drop-shadow(0 1px 4px rgba(139,105,20,0.4));
+    }
+    .award-item .award-text { display: flex; flex-direction: column; gap: 2px; justify-content: center; min-height: 54px; }
+    .award-item .award-title {
+      font-family: "Raleway", sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--navy);
+      line-height: 1.25;
+    }
+    .award-item .award-year {
+      font-size: 9px;
+      color: rgba(26,39,68,0.65);
+      letter-spacing: 0.5px;
+      line-height: 1.25;
+    }
+
+    /* ── PATHWAY ── */
+    .pathway { background: var(--navy); padding: 72px 0; }
+    .pathway-title-row {
+      display: block;
+      max-width: 760px;
+    }
+    .pathway .section-title { color: var(--cream); }
+    .pathway .section-intro { color: rgba(250,246,237,0.72); }
+    .pathway-maslow-callout {
+      display: none;
+    }
+    .pathway-maslow-full {
+      width: 360px;
+      display: block;
+      margin: 0 auto;
+      filter: drop-shadow(0 10px 18px rgba(26,39,68,0.45));
+    }
+    .pathway-maslow-caption {
+      font-family: "Raleway", sans-serif;
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(250,246,237,0.62);
+      font-weight: 600;
+      margin-top: 8px;
+    }
+    @media (max-width: 768px) {
+      .pathway-maslow-full { width: 220px; }
+    }
+    .pathway-cards {
+      display: flex;
+      flex-direction: column;
+      gap: 58px;
+      margin-top: 52px;
+    }
+    .pathway-card {
+      padding: 0 0 58px;
+      position: relative;
+      overflow: visible;
+      border-radius: 0;
+      border-bottom: 1px solid rgba(201,168,76,0.22);
+    }
+    .pathway-card:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .pathway-card.ignite,
+    .pathway-card.shift,
+    .pathway-card.launch {
+      background: transparent;
+      border-left: none;
+    }
+    .pathway-card::after { display: none; }
+    .pathway-maslow-badge {
+      position: absolute;
+      top: 16px;
+      right: 16px;
+      width: 130px;
+      border-radius: 3px;
+      overflow: hidden;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.25);
+      z-index: 2;
+    }
+    .pathway-maslow-badge img {
+      width: 100%;
+      display: block;
+    }
+    .pathway-maslow-badge-label {
+      font-size: 8px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      color: rgba(250,246,237,0.55);
+      text-align: right;
+      margin-top: 4px;
+    }
+    .pathway-text {
+      max-width: 640px;
+      margin: 0 auto;
+      padding: 0;
+    }
+    .pathway-tag {
+      font-size: 14px;
+      letter-spacing: 3px;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 6px;
+    }
+    .pathway-name {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 38px;
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .pathway-subtitle {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      letter-spacing: 0.3px;
+      text-transform: none;
+      color: var(--gold-light);
+      margin-bottom: 12px;
+      font-weight: 300;
+      font-style: italic;
+      line-height: 1.35;
+    }
+    .pathway-desc {
+      font-size: 21px;
+      line-height: 1.8;
+      color: rgba(250,246,237,0.78);
+      text-align: center;
+    }
+
+    .pathway-logo {
+      width: 180px;
+      height: 180px;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+      margin: 0 auto 12px;
+      background: transparent;
+      mix-blend-mode: normal;
+    }
+    .pathway-photo {
+      width: 100%;
+      height: 360px;
+      object-fit: cover;
+      object-position: center 42%;
+      display: block;
+      margin: 0 0 18px;
+      border-radius: 4px;
+      box-shadow: 0 10px 28px rgba(0,0,0,0.22);
+    }
+    .pathway-card.ignite .pathway-photo { object-position: center 42%; }
+    .pathway-card.shift .pathway-photo { object-position: center 50%; }
+    .pathway-card.launch .pathway-photo { object-position: center 34%; }
+    .pathway-maslow {
+      margin-top: 14px;
+      padding-top: 14px;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      font-size: 17px;
+      font-weight: 700;
+      color: rgba(201,168,76,0.85);
+      letter-spacing: 1px;
+      font-style: italic;
+      text-align: center;
+    }
+
+    /* ── TESTIMONIALS ── */
+    .testimonials { background: var(--cream-dark); }
+    .testimonial-photos {
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 24px;
+      margin-top: 40px;
+    }
+    .testimonial-photo-card { position: relative; border-radius: 4px; overflow: hidden; min-height: 260px; box-shadow: 0 4px 20px rgba(26,39,68,0.12); }
+    .testimonial-photo-card img { width: 100%; height: 100%; object-fit: cover; position: absolute; inset: 0; }
+    .testimonial-photo-label {
+      position: absolute;
+      left: 0; right: 0; bottom: 0;
+      padding: 14px 20px;
+      background: linear-gradient(0deg, rgba(26,39,68,0.85) 0%, rgba(26,39,68,0) 100%);
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--cream);
+      font-weight: 600;
+    }
+    .testimonial-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .testimonial-card {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 28px 24px;
+      box-shadow: 0 2px 16px rgba(26,39,68,0.07);
+      display: flex;
+      flex-direction: column;
+    }
+    .testimonial-card blockquote {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 17px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--navy);
+      line-height: 1.55;
+      margin-bottom: 16px;
+      flex-grow: 1;
+    }
+    .testimonial-card cite {
+      font-size: 10px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 700;
+      font-style: normal;
+    }
+    .testimonials-closing {
+      text-align: center;
+      margin-top: 44px;
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      font-style: italic;
+      font-weight: 300;
+      color: var(--navy);
+    }
+    @media (max-width: 900px) {
+      .testimonial-photos { grid-template-columns: 1fr; }
+      .testimonial-grid { grid-template-columns: 1fr; }
+    }
+
+/* ── SERVICES ── */
+    .services { background: var(--cream); }
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .service-card {
+      border: 1px solid var(--cream-dark);
+      border-radius: 4px;
+      padding: 36px 28px;
+      transition: border-color 0.2s, box-shadow 0.2s;
+      background: var(--white);
+    }
+    .service-card:hover {
+      border-color: var(--gold);
+      box-shadow: 0 4px 24px rgba(26,39,68,0.08);
+    }
+    .service-badge {
+      display: inline-block;
+      font-size: 9px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold);
+      background: var(--gold-pale);
+      padding: 4px 10px;
+      border-radius: 2px;
+      margin-bottom: 14px;
+      font-weight: 600;
+    }
+    .service-card h3 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      color: var(--navy);
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+    .service-card p {
+      font-size: 14px;
+      line-height: 1.8;
+      color: var(--text-mid);
+    }
+
+    /* ── REACH ── */
+    .reach { background: var(--navy); }
+    .reach .section-title { color: var(--cream); }
+    .reach .section-intro { color: rgba(250,246,237,0.7); }
+    .reach-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2px;
+      margin-top: 48px;
+      background: rgba(201,168,76,0.1);
+      border: 1px solid rgba(201,168,76,0.15);
+      border-radius: 4px;
+      overflow: hidden;
+    }
+    .reach-item {
+      background: var(--navy-mid);
+      padding: 36px 24px;
+      text-align: center;
+    }
+    .reach-num {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 14px;
+      color: var(--gold);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .reach-title {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 22px;
+      color: var(--white);
+      margin-bottom: 10px;
+      font-weight: 400;
+    }
+    .reach-desc {
+      font-size: 13px;
+      line-height: 1.7;
+      color: rgba(250,246,237,0.6);
+    }
+
+    /* ── PARTNER ── */
+    .partner { background: var(--cream-dark); }
+    .partner-intro {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 26px;
+      font-weight: 300;
+      font-style: italic;
+      color: var(--navy);
+      max-width: 700px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+    .partner-ways {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+    }
+    .partner-way {
+      background: var(--white);
+      border-radius: 4px;
+      padding: 32px;
+      display: flex;
+      gap: 20px;
+      align-items: flex-start;
+      border: 1px solid transparent;
+      transition: border-color 0.2s;
+    }
+    .partner-way:hover { border-color: var(--gold); }
+    .partner-num {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 48px;
+      font-weight: 300;
+      color: var(--gold);
+      line-height: 1;
+      flex-shrink: 0;
+    }
+    .partner-way h4 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 20px;
+      font-weight: 600;
+      color: var(--navy);
+      margin-bottom: 8px;
+    }
+    .partner-way p {
+      font-size: 14px;
+      line-height: 1.7;
+      color: var(--text-mid);
+    }
+
+    /* ── CTA ── */
+    .cta-section {
+      background: var(--navy);
+      text-align: center;
+      padding: 100px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    .cta-section::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at 50% 100%, rgba(201,168,76,0.12) 0%, transparent 60%);
+      pointer-events: none;
+    }
+    .cta-section h2 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: clamp(36px, 5vw, 60px);
+      font-weight: 300;
+      color: var(--white);
+      margin-bottom: 16px;
+      position: relative;
+    }
+    .cta-section h2 em { font-style: italic; color: var(--gold-light); }
+    .cta-section p {
+      font-size: 16px;
+      color: rgba(250,246,237,0.7);
+      max-width: 560px;
+      margin: 0 auto 48px;
+      line-height: 1.8;
+      position: relative;
+    }
+    .cta-buttons { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; position: relative; }
+
+    /* ── CONTACT FORM ── */
+    .contact-form-wrap {
+      max-width: 600px;
+      margin: 0 auto;
+      background: var(--navy-mid);
+      border: 1px solid rgba(201,168,76,0.25);
+      border-radius: 4px;
+      padding: 48px 40px;
+      position: relative;
+    }
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 16px;
+    }
+    .form-group label {
+      font-size: 10px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--gold-light);
+      margin-bottom: 6px;
+      font-weight: 600;
+    }
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      background: rgba(26,39,68,0.6);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 2px;
+      color: var(--cream);
+      font-family: "Raleway", sans-serif;
+      font-size: 14px;
+      padding: 12px 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--gold);
+    }
+    .form-group select option { background: var(--navy); }
+    .form-group textarea { resize: vertical; min-height: 100px; }
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--navy);
+      border: none;
+      padding: 16px;
+      font-family: "Raleway", sans-serif;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-radius: 2px;
+      transition: background 0.2s;
+      margin-top: 8px;
+    }
+    .form-submit:hover { background: var(--gold-light); }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #111b30;
+      padding: 48px 48px 28px;
+      text-align: center;
+      border-top: 1px solid rgba(201,168,76,0.2);
+    }
+    .footer-logo { margin-bottom: 16px; }
+    .footer-logo img {
+      width: 56px;
+      height: 56px;
+      object-fit: contain;
+      border-radius: 4px;
+    }
+    footer p {
+      font-size: 12px;
+      color: rgba(250,246,237,0.4);
+      letter-spacing: 1px;
+      line-height: 2;
+    }
+    .footer-tagline {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 16px;
+      font-style: italic;
+      color: rgba(201,168,76,0.7);
+      margin-bottom: 8px;
+    }
+    .footer-links {
+      display: flex;
+      gap: 24px;
+      justify-content: center;
+      margin-bottom: 24px;
+      flex-wrap: wrap;
+    }
+    .footer-links a {
+      font-size: 11px;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: rgba(250,246,237,0.4);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--gold); }
+
+    /* ── RESPONSIVE ── */
+
+    /* ── IMAGE PLACEHOLDERS ── */
+    .img-placeholder {
+      background: linear-gradient(135deg, var(--navy-mid) 0%, var(--navy-light) 100%);
+      border-radius: 4px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      min-height: 280px;
+      border: 2px dashed rgba(201,168,76,0.3);
+      position: relative;
+      overflow: hidden;
+    }
+    .img-placeholder::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background: radial-gradient(ellipse at center, rgba(201,168,76,0.05) 0%, transparent 70%);
+    }
+    .img-placeholder .ph-icon {
+      font-size: 36px;
+      opacity: 0.5;
+    }
+    .img-placeholder .ph-label {
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: rgba(201,168,76,0.6);
+      text-align: center;
+      padding: 0 20px;
+      font-family: "Raleway", sans-serif;
+    }
+    .img-placeholder .ph-note {
+      font-size: 10px;
+      color: rgba(250,246,237,0.3);
+      text-align: center;
+      padding: 0 20px;
+      font-style: italic;
+      font-family: "Raleway", sans-serif;
+    }
+    .img-placeholder img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      position: absolute;
+      inset: 0;
+      border-radius: 4px;
+    }
+
+    /* ── PEOPLE SECTION ── */
+    .people-section { background: var(--cream); }
+    .people-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 48px;
+    }
+    .people-card {
+      border-radius: 4px;
+      overflow: hidden;
+      background: var(--white);
+      box-shadow: 0 2px 16px rgba(26,39,68,0.07);
+    }
+    .people-card .img-placeholder { min-height: 300px; border-radius: 0; border: none; }
+    .people-card-body { padding: 20px; }
+    .people-card-body h4 {
+      font-family: "Cormorant Garamond", serif;
+      font-size: 18px;
+      color: var(--navy);
+      margin-bottom: 6px;
+    }
+    .people-card-body p {
+      font-size: 13px;
+      line-height: 1.7;
+      color: var(--text-mid);
+    }
+
+    /* ── MISSION PHOTO STRIP ── */
+    .trophy-panorama {
+      display: none;
+    }
+    .awards-panorama {
+      display: none !important;
+    }
+    .awards-panorama-hq {
+      display: none !important;
+    }
+    .awards-panorama-final {
+      display: none !important;
+    }
+    .awards-panorama-corrected {
+      width: 100%;
+      margin: 48px auto 0;
+      padding: 32px clamp(24px, 6vw, 88px);
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      gap: clamp(36px, 8vw, 120px);
+      background: #fff;
+      box-sizing: border-box;
+    }
+    .awards-panorama img {
+      width: auto;
+      height: clamp(180px, 19vw, 290px);
+      max-width: 28%;
+      object-fit: contain;
+      display: block;
+      flex: 0 1 auto;
+    }
+    .awards-panorama-hq img {
+      width: auto;
+      height: clamp(180px, 19vw, 290px);
+      max-width: 28%;
+      object-fit: contain;
+      display: block;
+      flex: 0 1 auto;
+      image-rendering: auto;
+    }
+    .awards-panorama-final img {
+      width: auto;
+      height: clamp(240px, 28vw, 400px);
+      max-width: 30%;
+      object-fit: contain;
+      display: block;
+      flex: 0 1 auto;
+    }
+    .awards-panorama-corrected img {
+      width: auto;
+      height: clamp(240px, 28vw, 400px);
+      max-width: 30%;
+      object-fit: contain;
+      display: block;
+      flex: 0 1 auto;
+    }
+    @media (max-width: 768px) {
+      .awards-panorama { padding: 24px 16px; gap: 18px; }
+      .awards-panorama img { height: clamp(110px, 34vw, 180px); max-width: 31%; }
+      .awards-panorama-hq { padding: 24px 16px; gap: 18px; }
+      .awards-panorama-hq img { height: clamp(110px, 34vw, 180px); max-width: 31%; }
+      .awards-panorama-final { padding: 24px 12px; gap: 12px; }
+      .awards-panorama-final img { height: clamp(150px, 42vw, 230px); max-width: 32%; }
+      .awards-panorama-corrected { padding: 24px 12px; gap: 12px; }
+      .awards-panorama-corrected img { height: clamp(150px, 42vw, 230px); max-width: 32%; }
+    }
+    .photo-strip {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1fr;
+      gap: 4px;
+      height: 380px;
+      margin-top: 48px;
+    }
+    .photo-strip .img-placeholder { min-height: unset; height: 100%; border-radius: 0; border: none; }
+    .photo-strip .img-placeholder:first-child { border-radius: 4px 0 0 4px; }
+    .photo-strip .img-placeholder:last-child { border-radius: 0 4px 4px 0; }
+
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .awards-strip { padding: 16px 32px; }
+      nav { padding: 14px 32px; }
+      .hero { padding: 80px 32px; }
+      .photo-strip { margin-left: 32px !important; margin-right: 32px !important; }
+    }
+
+    @media (max-width: 992px) {
+      .awards-scroll { flex-wrap: wrap; }
+      .award-item { flex: 1 1 50%; padding: 10px 20px; }
+      .award-item::after { display: none; }
+    }
+    @media (max-width: 768px) {
+      .purpose-section { padding: 56px 0 48px; }
+      .purpose-grid { grid-template-columns: 1fr; }
+      .purpose-card { padding: 24px 22px; }
+    }
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      nav { padding: 12px 20px; }
+      .awards-strip { padding: 12px 16px; }
+      .hero { padding: 48px 20px; }
+      .hero-inner { flex-direction: column; gap: 32px; text-align: center; }
+      .hero-text { text-align: center; }
+      .hero-logo { width: 180px; height: 180px; }
+      .hero h1 { white-space: normal; font-size: clamp(40px, 10vw, 60px); }
+      .hero-divider { margin: 0 auto 20px; }
+      .hero-buttons { justify-content: center; }
+
+      .people-grid { grid-template-columns: 1fr; }
+      .pathway-photo { height: 260px; }
+      .stat-category-image { height: 320px; }
+      .photo-strip { grid-template-columns: 1fr; height: auto; margin-left: 0 !important; margin-right: 0 !important; }
+      .photo-strip .img-placeholder { min-height: 200px; border-radius: 4px !important; }
+    }
+    @media (max-width: 1024px) {
+      .container { padding: 0 32px; }
+      .awards-strip { padding: 16px 32px; }
+      nav { padding: 14px 32px; }
+      .hero { padding: 80px 32px; }
+      .photo-strip { margin-left: 32px !important; margin-right: 32px !important; }
+    }
+
+    @media (max-width: 768px) {
+      .container { padding: 0 20px; }
+      nav { padding: 12px 20px; }
+      .awards-strip { padding: 12px 16px; }
+      .hero { padding: 48px 20px; }
+      .hero-inner { flex-direction: column; gap: 32px; text-align: center; }
+      .hero-text { text-align: center; }
+      .hero-logo { width: 180px; height: 180px; }
+      .hero h1 { white-space: normal; font-size: clamp(40px, 10vw, 60px); }
+      .hero-divider { margin: 0 auto 20px; }
+      .hero-buttons { justify-content: center; }
+      .pathway-photo { height: 260px; }
+      .stat-category-image { height: 320px; }
+
+      nav { padding: 12px 20px; }
+      .nav-links { display: none; }
+      .origin-grid { grid-template-columns: 1fr; gap: 40px; }
+      .stat-card { flex: 1 1 calc(50% - 2px); }
+      .pathway-cards { grid-template-columns: 1fr; }
+      .services-grid { grid-template-columns: 1fr; }
+      .reach-grid { grid-template-columns: repeat(2, 1fr); }
+      .partner-ways { grid-template-columns: 1fr; }
+      .form-row { grid-template-columns: 1fr; }
+      .contact-form-wrap { padding: 32px 24px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LOGO SELECTOR (work in progress — remove when logo is finalized) -->
+  
+
+  <!-- NAV -->
+  <nav>
+    <div class="nav-logo">
+      <img id="nav-logo-img" src="images/image_1.png" width="44" height="44" style="object-fit:contain;border-radius:4px;" alt="Ascend" />
+      <div class="nav-wordmark">
+        Ascend
+        <span>Institute</span>
+      </div>
+    </div>
+    <ul class="nav-links">
+      <li><a href="#our-story">Our Story</a></li>
+      <li><a href="#impact">Our Impact</a></li>
+      <li><a href="#pathway">The Pathway</a></li>
+      <li><a href="#services">What We Offer</a></li>
+      <li><a href="#partner">Partner With Us</a></li>
+      <li><a href="#connect" class="nav-cta">Get Connected</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+        <div class="hero-inner">
+      <div class="hero-logo-wrap">
+        <img id="hero-logo-img" src="images/image_2.png" class="hero-logo" alt="Ascend Institute" />
+      </div>
+      <div class="hero-text">
+        <h1><span style="color: var(--cream);">Be Ready</span> <em>to Ascend</em></h1>
+        <p class="hero-sub">Empowering Individuals.<br/>Transforming Organizations.<br/>Building Thriving Communities.</p>
+        <div class="hero-divider"></div>
+        <p class="hero-tagline">Workforce Development · Executive Consulting · Community Enrichment</p>
+        <div class="hero-buttons">
+          <a href="#connect" class="btn-primary">Partner With Us</a>
+          <a href="#our-story" class="btn-outline">Our Story</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR STORY -->
+  <section class="origin" id="our-story">
+    <div class="container">
+      <p class="section-eyebrow">Our Story</p>
+      <h2 class="section-title">Born in Flint.<br /><em>Built for the Nation.</em></h2>
+      <div class="gold-rule"></div>
+      <div class="origin-grid">
+        <div class="origin-text">
+          <p>Ascend Institute was born from a simple but powerful idea—that every person, regardless of circumstance, deserves the opportunity to build a strong foundation, pursue meaningful growth, and reach their full potential.</p>
+          <p>Ascend's roots trace back to <a href="https://www.bereadyflint.com" target="_blank" rel="noopener" style="color: var(--gold); text-decoration: underline; text-underline-offset: 3px; font-weight: 600;"><em>Be Ready Enrichment Services</em></a>, a nationally award-winning workforce enrichment program that transformed hundreds of lives inside NorthGate Supply Chain Services Company in Flint, Michigan. Be Ready was grounded in NorthGate's mission to bless people and inspired by founder Jack Goggins' belief that people should always be ready for new opportunities.</p>
+          <p>Designed around Maslow's Hierarchy of Needs, the Be Ready model was built on a commitment to meeting people where they are with dignity and respect, while empowering them to move forward with confidence.</p>
+          <p>What began as a commitment to employees evolved into a proven model for transformation. Through innovative programming, strategic partnerships, and a practical framework for growth and development, Be Ready earned local, national, and international recognition for its innovative approach to workforce enrichment, its commitment to professional development, and the meaningful impact it had on the lives of those it served.</p>
+          <p>Today, Ascend Institute carries that proven approach beyond NorthGate's walls and into the wider community. What started as one man's commitment to bless people grew into a distinguished model for personal and professional development. Now, Ascend Institute continues that legacy—blessing people through transformative training and development for all who are <em>ready to ascend</em>.</p>
+        </div>
+        <div class="timeline">
+          <div class="timeline-item">
+            <div class="timeline-dot"><span>2018</span></div>
+            <div class="timeline-content">
+              <h4><a href="https://www.bereadyflint.com" target="_blank" rel="noopener" style="color: var(--navy); text-decoration: underline; text-underline-offset: 3px;">Be Ready Enrichment Services Founded</a></h4>
+              <p>Launched inside NorthGate Manufacturing in Flint, MI — a dedicated center for employee transformation.</p>
+            </div>
           </div>
-          <div class="form-group">
-            <label for="last-name">Last Name</label>
-            <input type="text" id="last-name" name="last_name" required />
+          <div class="timeline-item">
+            <div class="timeline-dot"><span>2023</span></div>
+            <div class="timeline-content">
+              <h4>Program Expansion</h4>
+              <p>15+ community partners engaged. Curriculum deepened.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><span>2024</span></div>
+            <div class="timeline-content">
+              <h4>Recognition Begins</h4>
+              <p>Local, national, and international acolades for the program's outstanding impact on workforce excellence.</p>
+            </div>
+          </div>
+          <div class="timeline-item">
+            <div class="timeline-dot"><span>Now</span></div>
+            <div class="timeline-content">
+              <h4>Ascend Institute — Launched</h4>
+              <p>Independent nonprofit. Award-winning infrastructure. Ready to serve Flint, Michigan, and the nation.</p>
+            </div>
+          </div>
+          <div class="timeline-quote">
+            <blockquote>What began as a commitment to one workforce became a model the nation recognized. Ascend carries that proven work into every community ready to invest in its people.</blockquote>
+            <cite>Ascend Institute · Founded in Flint, Michigan</cite>
           </div>
         </div>
-        
-        <div class="form-group">
-          <label for="email">Email Address</label>
-          <input type="email" id="email" name="email" required />
+      </div>
+      <!-- AWARDS STRIP -->
+  <div class="awards-strip">
+    <div class="awards-scroll">
+      <div class="award-item">
+        <svg class="award-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold2" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E2A0"/>
+      <stop offset="40%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+    <linearGradient id="gold2b" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8C97E"/>
+      <stop offset="100%" stop-color="#A07820"/>
+    </linearGradient>
+  </defs>
+  <!-- Gear teeth path -->
+  <path d="M18 4 L20 4 L20.8 7.2 Q22.4 7.7 23.8 8.6 L27 7.2 L28.8 9 L27.4 12.2 Q28.3 13.6 28.8 15.2 L32 16 L32 18 L32 20 L28.8 20.8 Q28.3 22.4 27.4 23.8 L28.8 27 L27 28.8 L23.8 27.4 Q22.4 28.3 20.8 28.8 L20 32 L18 32 L16 32 L15.2 28.8 Q13.6 28.3 12.2 27.4 L9 28.8 L7.2 27 L8.6 23.8 Q7.7 22.4 7.2 20.8 L4 20 L4 18 L4 16 L7.2 15.2 Q7.7 13.6 8.6 12.2 L7.2 9 L9 7.2 L12.2 8.6 Q13.6 7.7 15.2 7.2 Z" fill="url(#gold2)" stroke="#8B6914" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- Inner circle cutout -->
+  <circle cx="18" cy="18" r="6" fill="#1a2744" stroke="url(#gold2b)" stroke-width="1"/>
+  <!-- Inner circle shine -->
+  <circle cx="18" cy="18" r="4" fill="none" stroke="url(#gold2b)" stroke-width="0.5"/>
+</svg>
+        <div class="award-text">
+          <div class="award-title">Supplier of the Year</div>
+          <div class="award-year">General Motors · 2024</div>
         </div>
-        
-        <div class="form-group">
-          <label for="subject">Subject</label>
-          <select id="subject" name="subject">
-            <option value="General Inquiry">General Inquiry</option>
-            <option value="Program Information">Program Information</option>
-            <option value="Partnership">Partnership Opportunities</option>
-          </select>
+      </div>
+      <div class="award-item">
+        <svg class="award-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold2c" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E2A0"/>
+      <stop offset="40%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+    <linearGradient id="gold2d" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#E8C97E"/>
+      <stop offset="100%" stop-color="#A07820"/>
+    </linearGradient>
+  </defs>
+  <!-- Gear teeth path -->
+  <path d="M18 4 L20 4 L20.8 7.2 Q22.4 7.7 23.8 8.6 L27 7.2 L28.8 9 L27.4 12.2 Q28.3 13.6 28.8 15.2 L32 16 L32 18 L32 20 L28.8 20.8 Q28.3 22.4 27.4 23.8 L28.8 27 L27 28.8 L23.8 27.4 Q22.4 28.3 20.8 28.8 L20 32 L18 32 L16 32 L15.2 28.8 Q13.6 28.3 12.2 27.4 L9 28.8 L7.2 27 L8.6 23.8 Q7.7 22.4 7.2 20.8 L4 20 L4 18 L4 16 L7.2 15.2 Q7.7 13.6 8.6 12.2 L7.2 9 L9 7.2 L12.2 8.6 Q13.6 7.7 15.2 7.2 Z" fill="url(#gold2c)" stroke="#8B6914" stroke-width="0.6" stroke-linejoin="round"/>
+  <!-- Inner circle cutout -->
+  <circle cx="18" cy="18" r="6" fill="#1a2744" stroke="url(#gold2d)" stroke-width="1"/>
+  <!-- Inner circle shine -->
+  <circle cx="18" cy="18" r="4" fill="none" stroke="url(#gold2d)" stroke-width="0.5"/>
+</svg>
+        <div class="award-text">
+          <div class="award-title">Overdrive Award</div>
+          <div class="award-year">General Motors · 2024</div>
         </div>
-        
-        <div class="form-group">
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
+      </div>
+      <div class="award-item">
+        <svg class="award-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold3" x1="20%" y1="0%" x2="80%" y2="100%">
+      <stop offset="0%" stop-color="#F5E2A0"/>
+      <stop offset="35%" stop-color="#E8C97E"/>
+      <stop offset="70%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+    <linearGradient id="gold3b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F5E2A0"/>
+      <stop offset="100%" stop-color="#C9A84C"/>
+    </linearGradient>
+  </defs>
+  <path d="M18 3 L21.5 13 L32.5 13 L23.5 19.5 L27 29.5 L18 23 L9 29.5 L12.5 19.5 L3.5 13 L14.5 13 Z" fill="url(#gold3)" stroke="#8B6914" stroke-width="0.7" stroke-linejoin="round"/>
+  <!-- Highlight on upper face -->
+  <path d="M18 5 L20.5 12.5 L14.5 12.5 Z" fill="url(#gold3b)" opacity="0.5"/>
+</svg>
+        <div class="award-text">
+          <div class="award-title">Art of Achievement — Business Impact</div>
+          <div class="award-year">Flint & Genesee Group · 2023–25</div>
         </div>
-        
-        <button type="submit" class="form-submit">Send Message</button>
-      </form>
+      </div><div class="award-item">
+        <svg class="award-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5E2A0"/>
+      <stop offset="30%" stop-color="#E8C97E"/>
+      <stop offset="60%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+    <linearGradient id="gold1b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C97E"/>
+      <stop offset="100%" stop-color="#A07820"/>
+    </linearGradient>
+  </defs>
+  <!-- Left laurel branch -->
+  <path d="M9 28 Q5 24 4 20 Q6 22 8 21 Q5 18 5 14 Q7 17 9 16 Q7 13 8 9 Q10 12 12 12 Q11 9 13 7 Q13 11 15 12 Q14 8 17 7" fill="none" stroke="url(#gold1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right laurel branch -->
+  <path d="M27 28 Q31 24 32 20 Q30 22 28 21 Q31 18 31 14 Q29 17 27 16 Q29 13 28 9 Q26 12 24 12 Q25 9 23 7 Q23 11 21 12 Q22 8 19 7" fill="none" stroke="url(#gold1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Stem base -->
+  <path d="M14 29 Q18 31 22 29" fill="none" stroke="url(#gold1)" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Center star -->
+  <path d="M18 10 L19.2 13.8 L23.2 13.8 L20 16.2 L21.2 20 L18 17.6 L14.8 20 L16 16.2 L12.8 13.8 L16.8 13.8 Z" fill="url(#gold1b)" stroke="url(#gold1)" stroke-width="0.4"/>
+</svg>
+        <div class="award-text">
+          <div class="award-title">Silver Stevie® — Corporate Social Responsibility</div>
+          <div class="award-year">American Business Awards · 2026</div>
+        </div>
+      </div>
+      <div class="award-item">
+        <svg class="award-icon" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="gold1" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#F5E2A0"/>
+      <stop offset="30%" stop-color="#E8C97E"/>
+      <stop offset="60%" stop-color="#C9A84C"/>
+      <stop offset="100%" stop-color="#8B6914"/>
+    </linearGradient>
+    <linearGradient id="gold1b" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#E8C97E"/>
+      <stop offset="100%" stop-color="#A07820"/>
+    </linearGradient>
+  </defs>
+  <!-- Left laurel branch -->
+  <path d="M9 28 Q5 24 4 20 Q6 22 8 21 Q5 18 5 14 Q7 17 9 16 Q7 13 8 9 Q10 12 12 12 Q11 9 13 7 Q13 11 15 12 Q14 8 17 7" fill="none" stroke="url(#gold1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Right laurel branch -->
+  <path d="M27 28 Q31 24 32 20 Q30 22 28 21 Q31 18 31 14 Q29 17 27 16 Q29 13 28 9 Q26 12 24 12 Q25 9 23 7 Q23 11 21 12 Q22 8 19 7" fill="none" stroke="url(#gold1)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Stem base -->
+  <path d="M14 29 Q18 31 22 29" fill="none" stroke="url(#gold1)" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- Center star -->
+  <path d="M18 10 L19.2 13.8 L23.2 13.8 L20 16.2 L21.2 20 L18 17.6 L14.8 20 L16 16.2 L12.8 13.8 L16.8 13.8 Z" fill="url(#gold1b)" stroke="url(#gold1)" stroke-width="0.4"/>
+</svg>
+        <div class="award-text">
+          <div class="award-title">Silver Stevie® — Diversity & Inclusion</div>
+          <div class="award-year">American Business Awards · 2026</div>
+        </div>
+      </div>
+      
     </div>
   </div>
-</section>
 
-<!-- FOOTER -->
-<footer>
-  <p>&copy; Ascend Institute. All rights reserved.</p>
-</footer>
 
-</body>  
+
+  
+
+  <img src="images/image_3.jpg" alt="GM Supplier of the Year Award, GM Overdrive Award, Flint and Genesee Art of Achievement Award, and two Silver Stevie Awards" class="trophy-panorama" />
+    
+
+  <div class="awards-panorama" role="img" aria-label="Art of Achievement Award, GM Overdrive Awards, and two Silver Stevie Awards">
+    <img src="images/image_4.png" alt="Flint and Genesee Art of Achievement Award" />
+    <img src="images/image_5.png" alt="GM Supplier of the Year and Overdrive Awards" />
+    <img src="images/image_6.png" alt="Two Silver Stevie Awards" />
+  </div>
+
+  <div class="awards-panorama-hq" role="img" aria-label="Art of Achievement Award, GM Overdrive Awards, and two Silver Stevie Awards">
+    <img src="images/image_7.png" alt="Flint and Genesee Art of Achievement Award" />
+    <img src="images/image_8.png" alt="GM Supplier of the Year and Overdrive Awards" />
+    <img src="images/image_9.png" alt="Two Silver Stevie Awards" />
+  </div>
+
+  <div class="awards-panorama-final" role="img" aria-label="Art of Achievement Award, GM Overdrive Awards, and two Silver Stevie Awards">
+    <img src="images/image_10.png" alt="Flint and Genesee Art of Achievement Award" />
+    <img src="images/image_11.png" alt="GM Supplier of the Year and Overdrive Awards" />
+    <img src="images/image_12.png" alt="Two Silver Stevie Awards" />
+  </div>
+
+  <div class="awards-panorama-corrected" role="img" aria-label="Art of Achievement Award, complete GM Supplier of the Year and Overdrive Awards, and two Silver Stevie Awards">
+    <img src="images/image_13.png" alt="Flint and Genesee Art of Achievement Award" />
+    <img src="images/image_14.png" alt="Complete GM Supplier of the Year and Overdrive Awards" />
+    <img src="images/image_15.png" alt="Two Silver Stevie Awards" />
+  </div>
+
+      <!-- ASCEND PURPOSE STATEMENT -->
+  <div class="purpose-section">
+    <div class="container">
+      <p class="section-eyebrow">Ascend Purpose Statement</p>
+      <p class="purpose-statement">
+        <span class="lead-line">Ascend Institute exists to<br />bless people through transformational workforce development and training.<br />Training is not truly transformational unless it is<br />Meaningful, Measurable, and Momentous.</span>
+      </p>
+      <div class="purpose-grid">
+        <div class="purpose-card">
+          <div class="purpose-card-header">
+            <div class="purpose-badge">M</div>
+            <h3>Meaningful</h3>
+          </div>
+          <div class="purpose-card-sub">
+            <span class="sub-text">The <strong>Heart</strong><br/>of the Matter</span>
+            <img class="purpose-icon" src="images/image_16.png" alt="Heart with heartbeat line" />
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path d="M50 91 16 58C-1 41 10 17 29 17c9 0 16 5 21 13 5-8 12-13 21-13 19 0 30 24 13 41L50 91Z" fill="var(--gold)"/>
+              <path d="M12 53h25l8-24 13 48 12-35 7 11h14" stroke="var(--navy)" stroke-width="7" fill="none" stroke-linecap="square" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <p>It looks every person in the eye and says — you matter. Your story matters. Your future matters.</p>
+        </div>
+        <div class="purpose-card">
+          <div class="purpose-card-header">
+            <div class="purpose-badge">M</div>
+            <h3>Measurable</h3>
+          </div>
+          <div class="purpose-card-sub">
+            <span class="sub-text">The <strong>Mind</strong><br/>of the Matter</span>
+            <img class="purpose-icon" src="images/image_17.png" alt="Bar chart" />
+            <svg viewBox="0 0 100 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <path d="M10 9v81h83" stroke="var(--gold)" stroke-width="8" fill="none" stroke-linecap="square"/>
+              <rect x="20" y="56" width="15" height="26" fill="var(--gold)"/>
+              <rect x="42" y="32" width="15" height="50" fill="var(--gold)"/>
+              <rect x="64" y="56" width="15" height="26" fill="var(--gold)"/>
+              <rect x="86" y="22" width="8" height="60" fill="var(--gold)"/>
+            </svg>
+          </div>
+          <p>It doesn't just inspire you, it equips you. When you leave, we can prove something changed. Yes, you can — and we have the data.</p>
+        </div>
+        <div class="purpose-card">
+          <div class="purpose-card-header">
+            <div class="purpose-badge">M</div>
+            <h3>Momentous</h3>
+          </div>
+          <div class="purpose-card-sub">
+            <span class="sub-text">The <strong>Soul</strong><br/>of the Matter</span>
+            <img class="purpose-icon" src="images/image_18.png" alt="People rising on an upward arrow" />
+            <svg viewBox="0 0 120 100" preserveAspectRatio="xMidYMid meet" aria-hidden="true" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="25" cy="16" r="8" fill="var(--gold)"/>
+              <circle cx="55" cy="16" r="8" fill="var(--gold)"/>
+              <circle cx="85" cy="16" r="8" fill="var(--gold)"/>
+              <path d="M8 55l6-25c1-5 5-8 10-8h2c5 0 9 3 10 8l5 21-8 2-4-17v34h-9V52h-8l-4 15-8-2 8-30" fill="var(--gold)"/>
+              <path d="M38 55l6-25c1-5 5-8 10-8h2c5 0 9 3 10 8l6 25-8 2-5-20v31h-9V48l-4 15-8-2Z" fill="var(--gold)"/>
+              <path d="M68 55l6-25c1-5 5-8 10-8h2c5 0 9 3 10 8l7 27-8 2-6-22v31h-9V48l-4 15-8-2Z" fill="var(--gold)"/>
+              <path d="M9 91 55 50l23 21 29-29" stroke="var(--gold)" stroke-width="9" fill="none" stroke-linejoin="miter"/>
+              <path d="M94 38h18v18Z" fill="var(--gold)"/>
+            </svg>
+          </div>
+          <p>It changes a person. That person changes their family. That family changes their neighborhood.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+  </section>
+
+
+
+
+<!-- THE ASCEND PATHWAY (merged) -->
+  <section class="pathway" id="pathway">
+    <div class="container">
+      <div class="pathway-title-row">
+        <div>
+          <p class="section-eyebrow">The Ascend Pathway</p>
+          <h2 class="section-title">Real People.<br /><em>Real Transformation.</em></h2>
+        </div>
+        <div class="pathway-maslow-callout">
+          <img src="images/image_19.png" alt="Maslow's Hierarchy of Needs pyramid" class="pathway-maslow-full" />
+          <p class="pathway-maslow-caption">Grounded in Maslow's Hierarchy of Needs</p>
+        </div>
+      </div>
+      <div class="gold-rule"></div>
+      <p class="section-intro">Our progressive model meets people exactly where they are — then walks with them all the way to where they're called to be. This is what Ascend looks like on the ground.</p>
+      <div class="pathway-cards">
+        <div class="pathway-card ignite" data-number="01">
+          <img src="images/image_20.jpg" alt="Community Support - Ignite" class="pathway-photo" />
+          <img src="images/image_21.png" alt="Ignite" class="pathway-logo" />
+          <div class="pathway-text">
+          <p class="pathway-tag">Phase One</p>
+          <p class="pathway-subtitle">Meeting immediate needs. Restoring stability.</p>
+          <p class="pathway-desc">Before someone can grow, they need to be stable. Ascend's Ignite phase removes the barriers that keep people from showing up — transportation, housing, emergency needs, and resource navigation.</p>
+          <p class="pathway-maslow">Grounded in Safety &amp; Physiological Needs</p>
+          </div>
+        </div>
+        <div class="pathway-card shift" data-number="02">
+          <img src="images/image_22.jpg" alt="Financial Literacy Coaching" class="pathway-photo" />
+          <img src="images/image_23.png" alt="Shift" class="pathway-logo" />
+          <div class="pathway-text">
+          <p class="pathway-tag">Phase Two</p>
+          <p class="pathway-subtitle">Building skills. Strengthening confidence.</p>
+          <p class="pathway-desc">Financial literacy, legal assistance, felony expungement, and Getting Ahead at Work training — practical tools that turn a temporary job into a sustainable future. Shift is where barriers become stepping stones.</p>
+          <p class="pathway-maslow">Grounded in Love, Belonging &amp; Esteem</p>
+          </div>
+        </div>
+        <div class="pathway-card launch" data-number="03">
+          <img src="images/image_24.jpg" alt="Leadership Training - Launch" class="pathway-photo" />
+          <img src="images/image_25.png" alt="Launch" class="pathway-logo" />
+          <div class="pathway-text">
+          <p class="pathway-tag">Phase Three</p>
+          <p class="pathway-subtitle">Developing leaders. Creating opportunity.</p>
+          <p class="pathway-desc">Eight weeks. Cohort-based. Transformative. Launch turns high-potential individuals into leaders equipped to elevate their families, teams, and communities through emotional intelligence and vision.</p>
+          <p class="pathway-maslow">Grounded in Self-Actualization</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IMPACT NUMBERS -->
+  <section class="impact" id="impact">
+    <div class="container">
+      <p class="section-eyebrow">The Work in Action</p>
+      <h2 class="section-title"><span style="color: var(--navy);">Every Number</span><br /><em>Is a Person.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-intro">These are not projections. These are lives already changed through the work that became Ascend.</p>
+      <br /><br />
+      <div class="stat-category">
+        <img src="images/image_26.jpg" alt="Family moving into stable housing" class="stat-category-image" />
+        <p class="stat-category-label">Stability</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-label">Homeless to Housed</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50</div>
+            <div class="stat-label">Moved into More Stable Housing</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">80+</div>
+            <div class="stat-label">Transportation Stabilized</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">20</div>
+            <div class="stat-label">Purchased a Vehicle</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">50+</div>
+            <div class="stat-label">Bank Accounts Opened</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">15+</div>
+            <div class="stat-label">Community Partners Engaged</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-category">
+        <img src="images/image_27.jpg" alt="Instructor guiding a student on her laptop in a classroom" class="stat-category-image" />
+        <p class="stat-category-label">Development</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">120+</div>
+            <div class="stat-label">Financial Literacy Training</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">100+</div>
+            <div class="stat-label">Engaged with Legal Service</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">75</div>
+            <div class="stat-label">Helped Through SOS Road to Restoration Clinic</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-label">Family Budgets Created</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">$50K+</div>
+            <div class="stat-label">Child Support Arrearages Resolved</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="stat-category">
+        <img src="images/image_28.jpg" alt="Graduate giving speech with her child" class="stat-category-image" />
+        <p class="stat-category-label">Transformation</p>
+        <div class="stats-grid">
+          <div class="stat-card">
+            <div class="stat-number">900+</div>
+            <div class="stat-label">Dream Coaching Sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">140+</div>
+            <div class="stat-label">Goal Setting Sessions</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">13</div>
+            <div class="stat-label">Expungement Successes</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">70</div>
+            <div class="stat-label">Professional Development Graduates</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">19</div>
+            <div class="stat-label">Promotions & Pay Increases</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">129</div>
+            <div class="stat-label">Connected to Life-Saving Health & Wellness Services</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- IN THEIR OWN WORDS -->
+  <section class="testimonials" id="testimonials">
+    <div class="container">
+      <p class="section-eyebrow">In Their Own Words</p>
+      <h2 class="section-title">Real Voices.<br /><em>Real Growth.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-intro">These are not projections. These are the words of the people who lived it.</p>
+      <div class="testimonial-photos">
+        <div class="testimonial-photo-card">
+          <img src="images/image_29.jpg" alt="2025 Launch Graduation" />
+          <div class="testimonial-photo-label">2025 Launch Graduation</div>
+        </div>
+        <div class="testimonial-photo-card">
+          <img src="images/image_30.jpg" alt="2025 Shift Cohort" />
+          <div class="testimonial-photo-label">2025 Shift Cohort</div>
+        </div>
+      </div>
+      <div class="testimonial-grid">
+        <div class="testimonial-card">
+          <blockquote>"This training inspired me to change how I operate in both my professional and personal life. I’ve been encouraged to address difficult situations head on and always be looking for ways to be the thermostat and not the thermometer."</blockquote>
+          <cite>Assistant Supervisor, Launch Graduate</cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"I have the ability to set the tone for every scenario in my life and I’m capable of changing the atmosphere with my attitude and approach, no matter the circumstance."</blockquote>
+          <cite>Assistant Supervisor, Launch Graduate</cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"I feel like I have another family here, and that makes coming to work much more comfortable. Knowing that my team has my back and supports me just as much as they want my support."</blockquote>
+          <cite>Be Ready Participant, Shift Graduate</cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"This program has provided me with valuable tools that I apply both in the workplace and in my personal life. Adopting the Be Ready mindset of serving and uplifting others has given me a renewed sense of pride in myself and in being an employee of NorthGate."</blockquote>
+          <cite>Supervisor, Launch Graduate</cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"I am here at NorthGate not only because of our mission but because this company makes me feel like I can grow, like the sky is the limit for me."</blockquote>
+          <cite>Supervisor, Launch Graduate</cite>
+        </div>
+        <div class="testimonial-card">
+          <blockquote>"Through their guidance, I have learned how to grow not only professionally but personally as well. They taught me not to lower myself to other people's level, but instead to rise above and help bring others up with me. I am also a proud graduate of the SHIFT and LAUNCH classes."</blockquote>
+          <cite>Team Lead, Shift & Launch Graduate</cite>
+        </div>
+      </div>
+      <p class="testimonials-closing">Every voice tells the same story: transformation.</p>
+    </div>
+  </section>
+
+  <!-- SERVICES -->
+  <section class="services" id="services">
+    <div class="container">
+      <p class="section-eyebrow">What We Offer</p>
+      <h2 class="section-title">A Proven Curriculum.<br /><em>Built for Every Sector.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-intro">Proven at NorthGate. Ready for employers, nonprofits, healthcare systems, faith communities, and government partners everywhere.</p>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-badge">Flagship</span>
+          <h3>Workplace Stability Training</h3>
+          <p>The direct link between personal stability and organizational performance. Breakthrough results for employers ready to invest in their workforce at the human level.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-badge">Core Program</span>
+          <h3>Ignite · Shift · Launch</h3>
+          <p>The full three-phase Ascend pathway — contracted and customized for your organization's workforce development goals.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-badge">Featured</span>
+          <h3>Bridge Impact Series</h3>
+          <p>Five courses grounded in Dr. Ruby Payne's AHA! Process — addressing the realities of poverty in healthcare, education, faith communities, and the workplace.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-badge">Premium</span>
+          <h3>Executive & Leadership Series</h3>
+          <p>EOS, Emotional Intelligence, Strategic Planning, Executive Team Building, and AI in Business. For organizations investing in their leadership pipeline.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-badge">Community</span>
+          <h3>Getting Ahead Program</h3>
+          <p>A 16–20 week community cohort for individuals — from economic instability to sustainable success. Bridges-certified and accessible through community funding.</p>
+        </div>
+        <div class="service-card">
+          <span class="service-badge">Credential</span>
+          <h3>Ascend Certification</h3>
+          <p>Three tracks — Foundation, Leadership, and Executive Master. An institutional credential for workforce excellence, recognized by Ascend's national partner network.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- REACH -->
+  <section class="reach" id="reach">
+    <div class="container">
+      <p class="section-eyebrow">Our Reach</p>
+      <h2 class="section-title" style="color: var(--cream);">From Flint<br /><em>to the World.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="section-intro">Ascend Institute serves organizations and individuals at every scale — from local employers to national networks.</p>
+      <div class="reach-grid">
+        <div class="reach-item">
+          <div class="reach-num">Local</div>
+          <div class="reach-title">Greater Flint</div>
+          <div class="reach-desc">Employers, nonprofits, health systems, government, faith communities, and schools across Genesee County.</div>
+        </div>
+        <div class="reach-item">
+          <div class="reach-num">Regional</div>
+          <div class="reach-title">Michigan</div>
+          <div class="reach-desc">Healthcare networks, state workforce development partners.</div>
+        </div>
+        <div class="reach-item">
+          <div class="reach-num">National</div>
+          <div class="reach-title">The Nation</div>
+          <div class="reach-desc">Bridges Out of Poverty certified. Award-winning infrastructure. Ready for corporate training networks nationwide.</div>
+        </div>
+        <div class="reach-item">
+          <div class="reach-num">Sectors</div>
+          <div class="reach-title">Every Table</div>
+          <div class="reach-desc">Healthcare · Education · Employers · Faith-Based · Government · Nonprofits</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PARTNER -->
+  <section class="partner" id="partner">
+    <div class="container">
+      <p class="section-eyebrow">Partner With Us</p>
+      <h2 class="section-title">Ways to Walk<br /><em>With Ascend.</em></h2>
+      <div class="gold-rule"></div>
+      <p class="partner-intro">"A transformational investment is one that lets something grow into its full potential — not by controlling the outcome, but by making it possible."</p>
+      <div class="partner-ways">
+        <div class="partner-way">
+          <div class="partner-num">01</div>
+          <div>
+            <h4>Service Contract</h4>
+            <p>Bring Ascend's proven programs directly to your organization. From Workplace Stability Training to the full Ignite/Shift/Launch pathway, customized for your team.</p>
+          </div>
+        </div>
+        <div class="partner-way">
+          <div class="partner-num">02</div>
+          <div>
+            <h4>Funding Partnership</h4>
+            <p>Foundations and corporate partners who share Ascend's mission can fuel programs that transform individuals and create measurable community-level impact.</p>
+          </div>
+        </div>
+        <div class="partner-way">
+          <div class="partner-num">03</div>
+          <div>
+            <h4>Advisory & Network</h4>
+            <p>Bring your expertise, connections, and credibility to Ascend's Advisory Board — shaping the future of workforce development regionally and nationally.</p>
+          </div>
+        </div>
+        <div class="partner-way">
+          <div class="partner-num">04</div>
+          <div>
+            <h4>Community Cohort Sponsorship</h4>
+            <p>Sponsor a Getting Ahead cohort in your community. Your investment funds access for individuals who can't self-fund the journey — and creates measurable local impact.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+      <!-- Partner photo strip -->
+      <div style="margin-top: 48px;">
+        <div style="max-width: 1100px; margin: 0 auto; padding: 0 48px;">
+          <img src="images/image_31.png" alt="People Ascend Serves" style="width: 100%; height: 480px; object-fit: cover; object-position: center top; border-radius: 4px; display: block;" />
+        </div>
+      </div>
+
+
+  <!-- CTA / CONNECT -->
+  <section class="cta-section" id="connect">
+    <div class="container">
+      <h2>Ready to <em>Ascend?</em></h2>
+      <p>Whether you're an employer, funder, community partner, or an individual ready to grow — we'd love to connect with you.</p>
+      <div class="contact-form-wrap">
+        <div class="form-row">
+          <div class="form-group">
+            <label>First Name</label>
+            <input type="text" placeholder="First name" />
+          </div>
+          <div class="form-group">
+            <label>Last Name</label>
+            <input type="text" placeholder="Last name" />
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Organization</label>
+          <input type="text" placeholder="Your organization or company" />
+        </div>
+        <div class="form-group">
+          <label>Email Address</label>
+          <input type="email" placeholder="your@email.com" />
+        </div>
+        <div class="form-group">
+          <label>I am interested in...</label>
+          <select>
+            <option value="">Select one</option>
+            <option>Workplace Stability Training for my organization</option>
+            <option>The Ignite / Shift / Launch program</option>
+            <option>Funding or grant partnership</option>
+            <option>Community cohort sponsorship</option>
+            <option>Advisory or network partnership</option>
+            <option>General information</option>
+          </select>
+        </div>
+        <div class="form-group">
+          <label>Message (optional)</label>
+          <textarea placeholder="Tell us a bit about your organization and how you'd like to connect..."></textarea>
+        </div>
+        <button class="form-submit">Send My Interest →</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-logo">
+      <img id="footer-logo-img" src="images/image_32.png" style="width:80px;height:auto;" alt="Ascend Institute" />
+    </div>
+    <p class="footer-tagline">Empowering Individuals. Transforming Organizations. Building Thriving Communities.</p>
+    <div class="footer-links">
+      <a href="#our-story">Our Story</a>
+      <a href="#pathway">The Pathway</a>
+      <a href="#services">What We Offer</a>
+      <a href="#partner">Partner With Us</a>
+      <a href="#connect">Connect</a>
+    </div>
+    <p>Ascend Institute · A 501(c)(3) Nonprofit Organization · Flint, Michigan</p>
+    <p style="margin-top:8px;">info@beready2ascend.org · beready2ascend.org</p>
+    <p style="margin-top:16px; font-size: 10px;">© 2026 Ascend Institute. All rights reserved.</p>
+  </footer>
+
+  <script>
+    // Logo selector functionality
+    
+  </script>
+</body>
 </html>
